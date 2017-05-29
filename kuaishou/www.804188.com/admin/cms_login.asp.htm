@@ -1,0 +1,46 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>登陆网站后台</title>
+<link href="../../www.804188.com.cdn103.hnpet.net/admin/style.css" tppabs="http://www.804188.com/admin/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="login">
+<div>
+	<form method="post" action="http://www.804188.com/admin/cms_login.asp">
+		<table align="center">
+			<tr>
+				<td width="60" align="right">用户名：</td>
+				<td colspan="2">
+					<input class="form_text" name="login_name" type="text" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">密　码：</td>
+				<td colspan="2">
+					<input class="form_text" name="login_password" type="password" />
+				</td>
+			</tr>
+			<tr>
+				<td align="right">验证码：</td>
+				<td>
+					<input class="form_text" name="login_verifycode" type="text" size="4" maxlength="4" />
+				</td>
+				<td width="170"><img src="../_include/verifycode.asp.bmp" tppabs="http://www.804188.com/_include/verifycode.asp" onclick="javascript:this.src='../_include/verifycode.asp?tm='+Math.random()" style="background:#EEEEEE; padding:5px; cursor:pointer;" alt="点击更换" title="点击更换" /></td>
+			</tr>
+			<tr align="center">
+				<td colspan="3">
+					<input id="login_button" type="submit" name="submit" value="管理登录"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+	</div>
+
+	<div class="clear"></div>
+</div>
+</body>
+</html>
