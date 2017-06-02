@@ -1,0 +1,5 @@
+﻿文件下载网址  =>  文件保存路径
+http://www.longrun.cc/css/images/bd-shadow.png  =>  G:\程序包\www.longrun.cc\images\bd-shadow.png
+http://www.longrun.cc/css/images/icoUp.gif  =>  G:\程序包\www.longrun.cc\images\icoup.gif
+http://www.longrun.cc/css/images/color_bg.jpg  =>  G:\程序包\www.longrun.cc\images\color_bg.jpg
+http://www.longrun.cc/images/arrow_d2.png  =>  G:\程序包\www.longrun.cc\images\arrow_d2.png

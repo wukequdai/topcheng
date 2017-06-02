@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="shijian.css"/>
+	</head>
+	<body>
+		<form action="1.php" method="get">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">姓名</label>
+		    <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="请输入姓名">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">手机号</label>
+		    <input type="text" class="form-control" id="exampleInputPassword1" name="phone" placeholder="请输入电话号码">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">服务类别</label>
+		    <select name="gcuser_id" id="d1" class="form-control">
+				</select> 
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">预约时间</label>
+		    <input type="text" class="form-control" id="input1" name="orderTime" placeholder="请输入预约时间">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">备注</label>
+		    <textarea class="form-control" rows="3" name="serviceIntroduction"></textarea>
+		  </div>
+		  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+			  提交预定
+			</button>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        
+			      </div>
+			      <div class="modal-body">
+			        	<p>确定提交?</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			        <button type="submit" class="btn btn-primary">确定</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</form>
+		<script src="jquery-1.11.3.js"></script>
+		<script src="bootstrap.js"></script>
+		<script src="jquer_shijian.js"></script>
+		<script type="bootlint.js"></script>
+		<script type="text/javascript">
+			$("#input1").shijian({
+				y:10//当前年份+10
+			})
+			$("document").ready(function(){
+				$.ajax({
+					method:'get',
+					url:'2.php',
+					success:function(data){
+						console.log(data);
+						var html='';
+						var str=JSON.parse(data);
+					$.each(str,function(i,item){
+							html+=`
+								<option>${item.gcuser_id}</option>
+							`;
+						});
+				console.log(html);
+				$("#d1").html(html);
+			}
+				})
+			});
+		</script>
+	</body>
+</html>
