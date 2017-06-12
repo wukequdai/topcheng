@@ -1,0 +1,43 @@
+﻿.jquerySlideDoor { overflow:hidden; position:relative; background:#fff;}
+.jquerySlideDoor .inner{ width:99999px; }
+.jquerySlideDoor .inner .item{ float:left; }
+.jquerySlideDoor .inner .item a{ display:block;}
+.jquerySlideDoor .inner .item img{ border:none; }
+.jquerySlideDoor .inner .item .info{ position:absolute; z-index:9;bottom:20px; display:none; }
+.jquerySlideDoor .inner .item:first-of-type .info{ display:block; bottom:0;}
+.jquerySlideDoor .inner .item .info p{display:none;}
+
+/*.jquerySlideDoor .ctrl{ position:absolute; z-index:1; width:100%; display:block;}
+.jquerySlideDoor .ctrl ul{ position:absolute; right:0; bottom:0; z-index:8; display:block;}
+.jquerySlideDoor .ctrl li{ float:left; display:inline; }
+.jquerySlideDoor .ctrl li a{ text-align:center;}*/
+
+.jquerySlideDoor a.btnLR{ position:absolute; z-index:100; text-align:center; text-decoration:none;}
+.jquerySlideDoor a.left{ left:0; top:0; background:url(../images/l.png) 0 0 no-repeat;}
+.jquerySlideDoor a.right{ right:0; top:0;background:url(../images/r.png) 0 0 no-repeat;}
+
+.homeBanner{ width:775px; height:220px; margin-top:5px;}
+.homeBanner .inner .item{ width:775px; height:220px;}
+.homeBanner .inner .item a{ width:775px; height:220px; }
+.homeBanner .inner .item .info{ left:0; height:20px; color:#fff; line-height:20px; text-indent:5px; }
+.homeBanner .inner .item img{width:775px; height:220px; background:#f1f1f1; }
+/*.homeBanner .ctrl{ background:#F60; height:20px; bottom:0; left:0;}
+.homeBanner .ctrl ul{height:14px; padding:3px; }
+.homeBanner .ctrl ul li{ background:#ccc; height:14px; width:14px; line-height:14px; margin-left:3px; font-size:10px; }
+.homeBanner .ctrl ul li.current{ background:#000; color:#fff;}
+.homeBanner .ctrl ul li a{ display:block; color:#000;}
+.homeBanner .ctrl ul li.current a{ color:#fff;}*/
+.homeBanner a.btnLR{width:45px; height:90px; top:200px; margin:0 30px; }
+.homeBanner a.stop{ background:#666; display:none;}
+
+
+#slide3 .inner{ position:absolute; }
+#slide3 .inner .item{ position:relative;}
+#slide3 .inner .item img{float:left; width:775px; height:220px;}
+#slide3 .ctrl{ top:0; }
+#slide3 .ctrl ul{height:6px; padding:7px; }
+#slide3 .ctrl li{ text-indent:-9999em; overflow:hidden; width:6px; height:6px; margin-right:6px;}
+#slide3 .info{ left:3px; top:-20px; width:180px; height:20px; }
+#slide3 .info p{ display:none;}
+
+

@@ -1,0 +1,8 @@
+﻿.jqueryShowDoor { overflow:hidden; position:relative;}
+.jqueryShowDoor .dotList { float:left;}
+.jqueryShowDoor .dotList ul { float:left;}
+.jqueryShowDoor .dotList:after {content:"\0821";display:block; height:0; clear:both; visibility:hidden;}
+.jqueryShowDoor .dotList li {height:16px; line-height:16px; float:left; display:inline;}
+.jqueryShowDoor .dotList li a { display:block; height:16px; line-height:16px; line-height:13px\0; [clor:;line-height:16px;] *line-height:13px; _line-height:13px; padding:0; display:inline-block; overflow:hidden;/*background: url(../images/icondot1.gif) no-repeat;*/}
+.jqueryShowDoor .dotList li a:hover,
+.jqueryShowDoor .dotList li.current a {color:#c00; /*background-image: url(../images/icondot2.gif);*/}

@@ -1,0 +1,29 @@
+/* CSS Document */
+body  {
+margin:0px; padding:0px;
+FONT-SIZE: 9pt;text-decoration: none;
+SCROLLBAR-FACE-COLOR: #B8D4EA;
+SCROLLBAR-HIGHLIGHT-COLOR: #B8D4EA;
+SCROLLBAR-SHADOW-COLOR: #fff;
+SCROLLBAR-3DLIGHT-COLOR: #fff;
+SCROLLBAR-ARROW-COLOR: #02338A;
+SCROLLBAR-TRACK-COLOR: #B8D4EA;
+SCROLLBAR-DARKSHADOW-COLOR: #B8D4EA;
+background-color: #fff;
+font-family:宋体;
+font-size:12px;
+color: #555;
+}
+td	{font-size:12px; font-family:宋体;}
+a{text-decoration: none;color: #555;} 
+a:hover{color: #FF0000;text-decoration: underline;} 
+
+p,span,em,img,div,body,form,h1,h2,h3,h4,h5,h6,strong,dl,dt,dd,ul,li,input,form{margin:0;padding:0;}
+ul,li {list-style-type:none;}
+.clear{ clear:both;}
+
+/*右边主页*/
+#sitemap{ background:url("Topmenu.gif") repeat-x; height:36px; font-size:12px; line-height:36px; padding-left:10px;}
+.boder_top{border-bottom:2px solid #E1EEFF; }
+.title{ background:#FBFDFF url("gif-0760.gif") no-repeat 10px center;line-height:36px; font-weight:bold;height:36px; color:#555; font-size:14px; padding-left:30px; }
+.tdnr{background: url("bullet1.gif") 26px center no-repeat; height:25px; padding-left:46px; line-height:25px;white-space:nowrap; }
