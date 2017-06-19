@@ -1,0 +1,5 @@
+﻿文件下载网址  =>  文件保存路径
+https://www.51go.com.au/Css/images/ui-icons_777620_256x240.png  =>  G:\chengxubao\www.51go.com.au\images\ui-icons_777620_256x240.png
+https://www.51go.com.au/Css/images/ui-icons_cc0000_256x240.png  =>  G:\chengxubao\www.51go.com.au\images\ui-icons_cc0000_256x240.png
+https://www.51go.com.au/Css/images/ui-icons_ffffff_256x240.png  =>  G:\chengxubao\www.51go.com.au\images\ui-icons_ffffff_256x240.png
+https://www.51go.com.au/Css/images/ui-icons_444444_256x240.png  =>  G:\chengxubao\www.51go.com.au\images\ui-icons_444444_256x240.png

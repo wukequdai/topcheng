@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/mobileredirect.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#26c5cf">
+    <title>51购悉尼代发平台 - 支付 </title>
+    <meta name="Description" content="">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/init.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    
+
+    
+
+    
+</head>
+<body>
+    <!--头部开始-->
+<div class="head_fix">
+    <div class="head user_head clearfix">
+        <a href="javascript:history.back(-1)" class="head_back"></a>
+        支付
+        <div class="daohang">
+    <em></em>
+    <ul class="daohang_yin">
+        <span class="sj"></span>
+        <li>
+            <a href="/Mobile" class="clearfix">
+                <img src="images/head_menu_shouye.png" /> 首页
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Category" class="clearfix">
+                <img src="images/head_menu_fenlei.png" /> 分类
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User" class="clearfix">
+                <img src="images/head_menu_zhanghu.png" /> 我的账户
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Order?orderStatus=0" class="clearfix">
+                <img src="images/head_menu_dingdan.png" /> 我的订单
+            </a>
+        </li>
+    </ul>
+</div>
+    </div>
+</div>
+
+    
+
+<div class="main">
+
+    <!--支付方式-->
+    <div class="zhifu_mess">
+        <div class="user_order_tl clearfix">
+            <span class="left">选择支付方式</span>
+        </div>
+        <div class="zhifu_qiehuan">
+            <ul class="zhifu_qiehuan_tl clearfix">
+                <li data-id="7">
+                    <a href="javascript:void(0);" class="ahover payment" data-id="7">
+                        <img src="images/zhifu/zhifu.jpg" class="img_q" />
+                        <img src="images/zhifu/zhifuh.jpg" class="img_h" />
+                    </a>
+                </li>
+                
+                <li class="payment wechat_pay" data-id="10">
+                    <a href="javascript:void(0);" class="payment" data-id="10">
+                        <img src="images/zhifu/weixin.jpg" class="img_q" />
+                        <img src="images/zhifu/weixinh.jpg" class="img_h" />
+                    </a>
+                </li>
+                
+                <li data-id="4">
+                    <a href="javascript:void(0);" class="payment" data-id="4">
+                        <img src="images/zhifu/qian.jpg" class="img_q" />
+                        <img src="images/zhifu/qianh.jpg" class="img_h" />
+                    </a>
+                </li>
+                <li data-id="5">
+                    <a href="javascript:void(0);" class="payment" data-id="5">
+                        <img src="images/zhifu/ka.png" class="img_q" />
+                        <img src="images/zhifu/kah.jpg" class="img_h" />
+                    </a>
+                </li>
+            </ul>
+            <div class="zhifu_qiehuan_main">
+                <div class="zhifu_qiehuan_con active" data-id="7">
+                    
+
+
+<div class="zhifubao_cankao"><b>支付宝</b></div>
+    
+<table cellpadding="0" cellspacing="0" class="zhifu_table">
+    <tr>
+        <td class="td_lf">支付手续费(+2%)</td>
+        <td class="td_rt">$1.45</td>
+    </tr>
+    <tr>
+        <td class="td_lf">实付金额</td>
+        <td class="td_rt">$74.14</td>
+    </tr>
+</table>
+<div class="zhifubao_cankao">
+    实际汇率 即时到账 今日参考汇率 - <span><strong>5.2000</strong></span>
+</div>
+<a id="pay_alipay" class="btn btn_blue zhifubtn" href="/Mobile/AliPay/PreparePayment?orderId=101291">
+    支付宝支付
+</a>
+
+
+
+
+
+                </div>
+                <div class="zhifu_qiehuan_con wechat_pay" data-id="10">
+                    
+
+<form action="/Mobile/RoyalPay/MakePayment" method="post"><input data-val="true" data-val-number="The field OrderId must be a number." data-val-required="The OrderId field is required." id="OrderId" name="OrderId" type="hidden" value="101291" />    <div class="zhifubao_cankao"><b>微信支付</b></div>
+    <table cellpadding="0" cellspacing="0" class="zhifu_table">
+        <tr>
+            <td class="td_lf">支付手续费(+1.5%)</td>
+            <td class="td_rt">$1.09</td>
+        </tr>
+        <tr>
+            <td class="td_lf">实付金额</td>
+            <td class="td_rt">$73.78</td>
+        </tr>
+    </table>
+    <div class="zhifubao_cankao">
+        实际汇率 即时到账 今日参考汇率 - <span><strong>5.1964</strong></span>
+    </div>
+    <input type="submit" class="btn btn_blue zhifubtn" value="微信支付" />
+</form>
+
+                </div>
+                
+                <div class="zhifu_qiehuan_con" data-id="4">
+                    
+
+<form action="/Mobile/Purchase/BankTransfer" enctype="multipart/form-data" method="post"><input data-val="true" data-val-number="The field OrderId must be a number." data-val-required="The OrderId field is required." id="OrderId" name="OrderId" type="hidden" value="101291" />    <div class="zhifubao_cankao"><b>银行转账</b></div>
+    <table cellpadding="0" cellspacing="0" class="zhifu_table">
+        <tr>
+            <td class="td_lf">实付金额</td>
+            <td class="td_rt">$72.69</td>
+        </tr>
+    </table>
+    <div class="qian_mess">
+        ACCOUNT NAME：<span class="color_black">GP Health</span><br /> BSB：
+        <span class="color_black">062184</span><br /> ACCOUNT NO：<span class="color_black">11424395</span>
+        <p>重要提示：</p>
+        <p>1，汇款时请务必注明 <b><mark>ORD<text>101291</text></mark></b>，并上传转账截图，否则会延误订单的处理。</p>
+        <p>2，我们会尽快查收账款，并为您安排发货。</p>
+    </div>
+    <div class="file_up">
+        <div class="tishi_tl">请选择一个或多个转账截图文件：</div>
+        <div class="clearfix">
+                <div class="up_img left" id="up_img_wrap0" style="display:none;" onclick="$('#up_img_input0').click();">
+                    <div class="up_img_main">
+                        <img id="up_img0" src="images/zhifu/zhifuimg.jpg" />
+                    </div>
+                </div>
+                <div class="up_img left" id="up_img_wrap1" style="display:none;" onclick="$('#up_img_input1').click();">
+                    <div class="up_img_main">
+                        <img id="up_img1" src="images/zhifu/zhifuimg.jpg" />
+                    </div>
+                </div>
+                <div class="up_img left" id="up_img_wrap2" style="display:none;" onclick="$('#up_img_input2').click();">
+                    <div class="up_img_main">
+                        <img id="up_img2" src="images/zhifu/zhifuimg.jpg" />
+                    </div>
+                </div>
+                <div class="up_img left" id="up_img_wrap3" style="display:none;" onclick="$('#up_img_input3').click();">
+                    <div class="up_img_main">
+                        <img id="up_img3" src="images/zhifu/zhifuimg.jpg" />
+                    </div>
+                </div>
+            
+            <div id="up_img_add" class="left upbtn">
+                <div class="upbtn_main">
+                    <em></em>
+                </div>
+            </div>
+            
+<input accept="image/*" id="up_img_input0" name="File[0]" onchange="loadImg(this, 0)" style="display:none;" type="file" value="" /><input accept="image/*" id="up_img_input1" name="File[1]" onchange="loadImg(this, 1)" style="display:none;" type="file" value="" /><input accept="image/*" id="up_img_input2" name="File[2]" onchange="loadImg(this, 2)" style="display:none;" type="file" value="" /><input accept="image/*" id="up_img_input3" name="File[3]" onchange="loadImg(this, 3)" style="display:none;" type="file" value="" />            
+        </div>
+    </div>
+    <input type="submit" class="btn btn_blue zhifubtn qianbtn" value="上传截图" />
+</form>
+<script>
+    var count = 0;
+
+    function loadImg(input, index) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var node = document.getElementById("up_img" + index);
+                node.setAttribute('src', e.target.result);
+                document.getElementById("up_img_wrap" + index).style.display = "block";
+                count = count + 1;
+                if (index == 3) {
+                    document.getElementById("up_img_add").style.display = "none";
+                }
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#up_img_add").click(function () {
+        if (count < 4) {
+            $('#up_img_input' + count).click();
+        }
+    });
+</script>
+
+                </div>
+                <div class="zhifu_qiehuan_con" data-id="5">
+                    
+
+<form action="/Mobile/Deposit/MakeOrderPayment" method="post"><input data-val="true" data-val-number="The field OrderId must be a number." data-val-required="The OrderId field is required." id="OrderId" name="OrderId" type="hidden" value="101291" />    <div class="zhifubao_cankao"><b>预存款</b></div>
+    <table cellpadding="0" cellspacing="0" class="zhifu_table">
+        <tr>
+            <td class="td_lf">实付金额</td>
+            <td class="td_rt">$72.69</td>
+        </tr>
+    </table>
+    <div class="zhifubao_cankao">
+        当前余额：<span>$0.00</span>
+    </div>
+    <input type="submit" class="btn btn_blue zhifubtn" value="使用预存款支付" />
+</form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<input type="hidden" id="paymentMethodId" value="7" />
+<script>
+
+    $(document).ready(function () {
+        var paymentMethodId = $("#paymentMethodId").val();
+        reInit(paymentMethodId);
+
+
+        $(".payment").click(function () {
+            paymentMethodId = $(this).attr("data-id");
+            //reInit(paymentMethodId);
+        });
+
+        if (!isWeChatBrowser()) {
+            $('.wechat_pay').hide();
+        }
+
+        function reInit(paymentMethodId) {
+            $.each($(".payment"), function () {
+
+                if ($(this).attr("data-id") == paymentMethodId) {
+                    $(".zhifu_qiehuan_con").each(function () {
+                        $(this).removeClass("active");
+                    });
+                    $("div[data-id=" + paymentMethodId + "]").addClass("active");
+
+                    $(".payment").each(function () {
+                        $(this).removeClass("active");
+                    });
+                    $(this).addClass("active")
+                }
+                else {
+                    $(this).removeClass("active");
+                }
+            });
+            /*alert($("input[data-id=" + paymentMethodId + "]").prop("checked"));
+            $("input[data-id=7]").prop("checked", false);
+            $("input[data-id=4]").prop("checked", false);
+            $("input[data-id=5]").prop("checked", false);
+            $("input[data-id=" + paymentMethodId + "]").prop("checked", true);*/
+        }
+    });
+</script>
+
+
+<script type="text/javascript" src="js/qin.js"></script>
+
+
+
+    <!--尾部-->
+<div class="footer">
+    <ul class="clearfix footer_ul">
+        <li>
+            <a href="/Mobile">
+                <div class="footer_img">
+                    <img src="images/footer/shouye_ico.png" class="img_q" />
+                    <img src="images/footer/shouye_icoh.png" class="img_h" />
+                </div>
+                <p>
+                    首页
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(Tawk_API.toggle())">
+                <div class="footer_img">
+                    <img src="images/footer/footer_kefu.png" class="img_q" />
+                    <img src="images/footer/footer_kefuh.png" class="img_h" />
+                </div>
+                <p>
+                    客服
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Purchase/ShoppingCart" class="gouwuche" id="bottomCart">
+                <div class="footer_img" >
+                    <img src="images/footer/gouwudai.png" class="img_q" />
+                    <img src="images/footer/gouwudaih.png" class="img_h" />
+                    <span class="num" id="ecsCartInfo"></span>
+                </div>
+                <p>
+                    购物袋
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User">
+                <div class="footer_img">
+                    <img src="images/footer/mine.png" class="img_q" />
+                    <img src="images/footer/mineh.png" class="img_h" />
+                </div>
+                <p>
+                    我的
+                </p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Mobile/Purchase/GetCartItemCount",
+            type: "POST",
+            success: function (data) {
+                $("#ecsCartInfo").text(data.cart_total);
+            }
+        });
+    })
+</script>
+
+<script type="text/javascript" src="js/qin.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5768107cb57c0500209794b6/1arrsi0jq';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+<!--Start of Google Analytics Script-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80632807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End of Google Analytics Script-->
+    
+</body>
+</html>

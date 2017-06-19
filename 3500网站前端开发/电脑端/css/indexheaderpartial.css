@@ -1,0 +1,106 @@
+﻿/*.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    text-align: center;
+    color: black;
+    display: block;
+    height:35px;
+}
+
+.dropdown-content a:hover {
+    background-color: lightgray;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+    .popup_parent {
+        position:relative;
+    }
+
+    .popup_menu {
+        position: absolute;
+        top: 48px;
+        height: 400px;
+        left: 0px;
+        list-style: none;
+        display: none;
+        z-index: 1000;
+        text-align: left;
+        line-height: 18px;
+        background-color: transparent;
+    }
+
+    .masklayer {
+        position: absolute;
+        top: 51px;
+        background-color: white;
+        z-index: 999;
+        display: none;
+    }
+
+    #masklayergrey {
+        position: absolute;
+        bottom: -800px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.5);
+        z-index: 998;
+        display: none;
+    }
+
+    .popup_menu .secondCategory {
+        width:395px;
+        margin:10px 10px 0px 0px;
+        padding:10px 10px;
+        display:inline-block;
+        vertical-align:top;
+    }
+
+    .popup_menu .secondCategory p a {
+        color:black;
+        font-size:15px;
+    }
+
+    .popup_menu .secondCategory .thirdCategory{
+        margin-top:20px;
+        font-size:14px;
+    }
+
+    .popup_menu .secondCategory .thirdCategory a{
+        color:rgb(108, 108, 108);
+        padding:0px 8px  0px 8px;
+        display:inline-block;
+        margin-top:8px;
+    }*/
+
+.dropdown {display: inline-block;}
+.dropdown-content {display: none;position: absolute;background-color: #f9f9f9;min-width: 100px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
+.dropdown-content a {text-align: center;color: black;display: block;line-height: 25px;padding-top: 5px;padding-bottom: 5px;}
+.dropdown-content a:hover {background-color: lightgray;}
+.dropdown:hover .dropdown-content {display: block;}
+.popup_parent {position:relative;}
+.popup_menu {position: absolute;top: 48px;height: 400px;left: 0px;list-style: none;display: none;z-index: 1000;text-align: left;line-height: 18px;background-color: transparent;}
+.masklayer {position: absolute;top: 51px;/*background-color: rgb(228, 228, 228);*/
+background-color: white;z-index: 999;display: none;}
+#masklayergrey {position: absolute;bottom: -800px;left: 0;right: 0;background-color: rgba(0,0,0,.5);z-index: 998;display: none;}
+.popup_menu .secondCategory {width:395px;margin:10px 10px 0px 0px;padding:10px 10px;/*border:1px dashed lightgrey;*/
+display:inline-block;vertical-align:top;}
+.popup_menu .secondCategory p a {color:black;font-size:15px;}
+.popup_menu .secondCategory p a:hover {color: Highlight;}
+.popup_menu .secondCategory .thirdCategory{margin-top:20px;font-size:14px;}
+.popup_menu .secondCategory .thirdCategory a{color:rgb(108, 108, 108);padding:0px 8px  0px 8px;display:inline-block;margin-top:8px;}
+.popup_menu .secondCategory .thirdCategory a:hover{color: Highlight;}
+

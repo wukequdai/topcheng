@@ -1,0 +1,1309 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/mobileredirect.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1,  user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="theme-color" content="#26c5cf">
+    <title>首页 - 51购悉尼代发平台</title>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/init.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body data-pinterest-extension-installed="ff1.37.9">
+    
+<!--头部开始-->
+<div class="head_fix">
+    <div id="searchcontainer" class="head index_head">
+<form action="/Mobile/Category/Search" method="get">            <div class="head_logo"><img src="picture/logo.png" width="75" /></div>
+            <div class="head_search">
+                <div class="head_search_main clearfix">
+                    <input id="searchbox" type="search" name="keyword" class="left head_search_main_lf" placeholder="搜索商品品牌 名称 功效" />
+                    <input value="" class="head_search_btn right" type="submit">
+                </div>
+            </div>
+            <a href="/Mobile/Category" class="index_head_fenlei"></a>
+</form>    </div>
+
+    <!--菜单开始-->
+    <ul class="clearfix index_menu">
+        <li>
+            <a href="/Mobile/Category/FeaturedProducts">推荐 </a>
+        </li>
+        <li>
+            <a href="/Mobile/Category/Index/1">母婴</a>
+        </li>
+        <li>
+            <a href="/Mobile/Category/Index/2">保健</a>
+        </li>
+        <li>
+            <a href="/Mobile/Category/Index/3">美妆</a>
+        </li>
+        <li>
+            <a href="/Mobile/Category/Index/84">家居</a>
+        </li>
+        <li>
+            <a href="/Mobile/Category/Index/88">美食</a>
+        </li>
+        <li>
+            <a href="#">时尚</a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        function searchProduct(request, response) {
+            $.ajax({
+                type: "POST",
+                url: "/Category/SearchJson?keyword=" + request.term,
+                success: function (data) { response(data.Data); },
+            });
+        }
+
+        $("#searchbox").autocomplete({
+            delay: 500,
+            minLength: 2,
+            source: searchProduct,
+            appendTo: '#searchcontainer',
+            position: { my: "left-90 top" },
+            select: function (event, ui) {
+                $("#small-searchterms").val(ui.item.label);
+                window.location = "/Mobile/Product/" + ui.item.Slug;
+                return false;
+            },
+            open: function() {
+                $("ul.ui-menu").width($(window).width() - 2);
+                //$("ul.ui-menu").height();
+                var height = $(window).height() - 90;
+                $("ul.ui-menu").css('max-height', height+'px');
+            }
+        })
+        .data("ui-autocomplete")._renderItem = function (ul, item) {
+            return $("<li></li>")
+                .data("item.autocomplete", item)
+                //.append("<a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td width=\"65\"><img src='" + item.ThumbnailUrl + "' width=\"65\"></td><td>" + item.Name + "</td></tr></table></a>")
+                .append("<a><div class=\"search-item\"><div class=\"search-item-img-box\" ><img src='" + item.ThumbnailUrl + "' class=\"search-item-img\"/></div><div class=\"search-item-info\"><div class=\"search-item-name\">" + item.Name + "</div><div class=\"search-item-price\">$" + item.Price + "</div></div></div>")
+                .appendTo(ul);
+        };
+
+});
+</script>
+
+
+<div class="main" style="padding-top: 80px; padding-bottom:0px;">
+
+    <!--首页轮播图-->
+    <div class="index_ban">
+        <div class="block_home_slider">
+            <div id="home_slider" class="flexslider">
+                <ul class="slides">
+                        <li>
+                            <div class="slide">
+                                <a href="#">
+                                        <img src="images/banner_6.jpg" id="banner_a_0" />
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="slide">
+                                <a href="#">
+                                        <img src="images/banner_7.jpg" id="banner_a_1" />
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="slide">
+                                <a href="#">
+                                        <img src="images/banner_8.jpg" id="banner_a_2" />
+                                </a>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--热卖产品等分类导航-->
+    <!--<ul class="fenlei_caidan clearfix">
+        <li>
+            <a href="/Mobile/Category/HotProducts">
+                <img src="picture/index_remai_ico.jpg" />
+                <p>
+                    热卖商品
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Category/FeaturedProducts">
+                <img src="picture/index_koubei_ico.jpg" />
+                <p>
+                    口碑推荐
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Category/BigSaleProducts">
+                <img src="picture/index_tejia_ico.jpg" />
+                <p>
+                    本周特价
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Category/NewProducts">
+                <img src="picture/index_xihuan_ico.jpg" />
+                <p>
+                    新品推荐
+                </p>
+            </a>
+        </li>
+    </ul>-->
+   
+    <!--大分类-->
+    <div class="clearfix big_fenlei_main">
+        <div class="big_fenlei left big_fenlei_lf">
+            <a href="/Mobile/Category/Index/1">
+                <span class="big_fenlei_con">
+                    <div class="big_fenlei_dingwei">
+                        <div class="big_fenlei_tl clearfix">
+                            <span class="right">
+                                <p class="big">
+                                    奶粉特快
+                                </p>
+                                EXPRESS MILK POWDER
+                            </span>
+                        </div>
+                        <img src="picture/cate_1.jpg" />
+                    </div>
+                </span>
+            </a>
+        </div>
+        <div class="big_fenlei left big_fenlei_rt">
+            <div class="clearfix">
+                <div class="big_fenlei left small_fenlei">
+                    <a href="/Mobile/Category/Index/2">
+                        <span class="big_fenlei_con">
+                            <div class="big_fenlei_tl clearfix">
+                                <span class="right">
+                                    <p class="big">
+                                        限时团购
+                                    </p>
+                                    GROUP
+                                </span>
+                            </div>
+                            <img src="picture/cate_2.jpg" />
+                        </span>
+                    </a>
+                </div>
+                <div class="big_fenlei left small_fenlei">
+                    <a href="/Mobile/Category/Index/3">
+                        <span class="big_fenlei_con">
+                            <div class="big_fenlei_tl clearfix">
+                                <span class="right">
+                                    <p class="big">
+                                        特价产品
+                                    </p>
+                                    SPECIAL PRODUCTS
+                                </span>
+                            </div>
+                            <img src="picture/cate_3.jpg" />
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="d4 left small_fenlei">
+                    <a href="/Mobile/Category/Index/84">
+                        <span class="big_fenlei_con">
+                            <div class="big_fenlei_tl clearfix">
+                                <span class="right">
+                                    <p class="big">
+                                        新品推荐
+                                    </p>
+                                    NEW PRODUCTS
+                                </span>
+                            </div>
+                            <img src="picture/cate_4.jpg" />
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="jingxuan">
+            <div class="jingxuan_tl index_pro_tl">
+                <span>
+                    本期团购
+                </span>
+                <a class="right" href="/Mobile/Category/Index/1">更多</a>
+            </div>
+            <div id="jingxuanlist" class="clearfix">
+                    <a href="/Mobile/Product/caprilac-goat-milk-powder-1kg" class="clearfix">
+                        <div class="jingxuan_item_left">
+                            <img src="picture/0000278_caprilac-natural-goat-milk-powder-1-kg.jpeg">
+                        </div>
+                        <div class="jingxuan_item_right">
+                            <p class="jingxuan_item_name">
+                                Caprilac  成人羊奶粉 1kg<span class='settime' endTime='2017-06-18 16:22:44'></span>
+                            </p>
+                            <p class="jingxuan_item_origprice">原价：$28.95</p>
+                            <p class="jingxuan_item_curtprice">$26.95<span> AUD</span></p>
+                            <p class="jingxuan_item_rmb"><span class="jingxuan_item_tag">直降</span></p>
+                            <span style="color:red;" class="settime" endTime="2017-06-18 16:22:44"></span>
+                            <img src="images/buy.png" alt="" class="d5"/>
+                        </div>
+                    </a>
+                    <a href="/Mobile/Product/s-26-step-3" class="clearfix">
+                        <div class="jingxuan_item_left">
+                            <img src="picture/0000856_s-26-step-3.jpeg">
+                        </div>
+                        <div class="jingxuan_item_right">
+                            <p class="jingxuan_item_name">
+                                Wyeth 惠氏金装S26婴幼儿奶粉3段 900g
+
+                            </p>
+                            <p class="jingxuan_item_origprice">原价：$15.95</p>
+                            <p class="jingxuan_item_curtprice">$14.00<span> AUD</span></p>
+                            <p class="jingxuan_item_rmb"><span class="jingxuan_item_tag">直降</span></p>
+                            <span style="color:red;" class="settime" endTime="2017-06-18 16:22:44"></span>
+                            <img src="images/buy.png" alt="" class="d5"/>
+                        </div>
+                    </a>
+                    <a href="/Mobile/Product/ks-pink-salt-369g" class="clearfix">
+                        <div class="jingxuan_item_left">
+                            <img src="picture/0000874_kirkland-signature-369g.jpeg">
+                        </div>
+                        <div class="jingxuan_item_right">
+                            <p class="jingxuan_item_name">
+                                Kirkland 科克兰 喜马拉雅山研磨粉红盐 369g
+                            </p>
+                            <p class="jingxuan_item_origprice">原价：$7.00</p>
+                            <p class="jingxuan_item_curtprice">$6.30<span> AUD</span></p>
+                            <p class="jingxuan_item_rmb"><span class="jingxuan_item_tag">直降</span></p>
+                            <span style="color:red;" class="settime" endTime="2017-06-18 16:22:44"></span>
+                            <img src="images/buy.png" alt="" class="d5"/>
+                        </div>
+                    </a>
+                    <a href="/Mobile/Product/menevit-90-capsules" class="clearfix">
+                        <div class="jingxuan_item_left">
+                            <img src="picture/0001742_menevit-90-capsules.jpeg">
+                        </div>
+                        <div class="jingxuan_item_right">
+                            <p class="jingxuan_item_name">
+                                Menevit 男性优生备孕营养素 90粒
+                            </p>
+                            <p class="jingxuan_item_origprice">原价：$62.50</p>
+                            <p class="jingxuan_item_curtprice">$58.00<span> AUD</span></p>
+                            <p class="jingxuan_item_rmb"><span class="jingxuan_item_tag">直降</span></p>
+                            <span style="color:red;" class="settime" endTime="2017-06-18 16:22:44"></span>
+                            <img src="images/buy.png" alt="" class="d5"/>
+                        </div>
+                    </a>
+            </div>
+        </div>
+
+ 
+        <div class="jingxuan">
+            <div class="jingxuan_tl">
+                <span>
+                    <a href="/Mobile/Category/NewProducts">新品推荐</a>
+                </span>
+            </div>
+
+            <div id="jingxuanlist" class="clearfix">
+                    <a href="/Mobile/Product/life-space-infant-60g" class="clearfix">
+                        <div class="jingxuan_item_left">
+                            <img src="picture/0001743_life-space-infant-60g.jpeg">
+                        </div>
+                        <div class="jingxuan_item_right">
+                            <p class="jingxuan_item_name">
+                                Life Space 新生儿益生菌 60g
+                            </p>
+                            
+                            <p class="jingxuan_item_curtprice">$20.95<span> AUD</span></p>
+                            <p class="jingxuan_item_rmb"><span class="jingxuan_item_tag">新品</span></p>
+                        </div>
+                    </a>
+                    <a href="/Mobile/Product/banana-boat-everyday-200g" class="clearfix">
+                        <div class="jingxuan_item_left">
+                            <img src="picture/0001744_banana-boat-everyday-200g.jpeg">
+                        </div>
+                        <div class="jingxuan_item_right">
+                            <p class="jingxuan_item_name">
+                                Banana Boat 香蕉船 日常防晒乳霜SPF50+ 200g
+                            </p>
+                            
+                            <p class="jingxuan_item_curtprice">$10.50<span> AUD</span></p>
+                            <p class="jingxuan_item_rmb"><span class="jingxuan_item_tag">新品</span></p>
+                        </div>
+                    </a>
+                    <a href="/Mobile/Product/natio-suncare-roll-50-100ml" class="clearfix">
+                        <div class="jingxuan_item_left">
+                            <img src="picture/0001745_natio-suncare-roll-50-100ml.jpeg">
+                        </div>
+                        <div class="jingxuan_item_right">
+                            <p class="jingxuan_item_name">
+                                Natio 防晒滚珠 SPF50+ 100ml
+                            </p>
+                            
+                            <p class="jingxuan_item_curtprice">$7.95<span> AUD</span></p>
+                            <p class="jingxuan_item_rmb"><span class="jingxuan_item_tag">新品</span></p>
+                        </div>
+                    </a>
+                    <a href="/Mobile/Product/iberogast-solution-50ml" class="clearfix">
+                        <div class="jingxuan_item_left">
+                            <img src="picture/0001741_iberogast-solution-50ml.jpeg">
+                        </div>
+                        <div class="jingxuan_item_right">
+                            <p class="jingxuan_item_name">
+                                Iberogast Solution 植物肠胃调理液 50ml
+                            </p>
+                            
+                            <p class="jingxuan_item_curtprice">$18.50<span> AUD</span></p>
+                            <p class="jingxuan_item_rmb"><span class="jingxuan_item_tag">新品</span></p>
+                        </div>
+                    </a>
+            </div>
+        </div>
+
+    <script>
+        $(function () {
+            var jxlistH = $(window).width() * 0.5;
+            $("#jingxuanlist a").prop("height", jxlistH);
+        })
+    </script>
+
+    
+
+    
+
+    <!--品牌特惠 -->
+    <div class="pinpai">
+        <div class="index_pro_tl clearfix two_tl">
+            <span class="left">品牌特惠</span>
+            
+        </div>
+        <ul class="clearfix pinpai_ul">
+            <li>
+                <a href="/Mobile/Category/Search?keyword=a2">
+                    <img src="picture/a2_3.jpg" />
+                </a>
+            </li>
+            <li>
+                <a href="/Mobile/Category/Search?keyword=aptamil">
+                    <img src="picture/aptamil.jpg" />
+                </a>
+            </li>
+            <li>
+                <a href="/Mobile/Category/Search?keyword=bellamy">
+                    <img src="picture/bellamy_s.jpg" />
+                </a>
+            </li>
+            <li>
+                <a href="/Mobile/Category/Search?keyword=blackmores">
+                    <img src="picture/blackmore.jpg" />
+                </a>
+            </li>
+            <li>
+                <a href="/Mobile/Category/Search?keyword=healthy%20care">
+                    <img src="picture/healthy_care.jpg" />
+                </a>
+            </li>
+            <li>
+                <a href="/Mobile/Category/Search?keyword=swisse">
+                    <img src="picture/swisse.jpg" />
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--分类展示区-->
+        <div class="fenlei_neirong">
+            <div class="index_pro_tl clearfix three_tl">
+                <span class="left">母婴专区</span>
+                <a class="right" href="/Mobile/Category/Index/1">更多</a>
+            </div>
+            <ul class="fenlei_neirong_ul clearfix">
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/a2-step-3-900g">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0001539_a2-step-3-900g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/a2-step-3-900g">A2 Platinum 白金婴幼儿奶粉 3段 900g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$35.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="405"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="405">
+                                    <a href="javascript:void(0);" class="add left" data-id="405"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="405"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/a2-step-2-900g">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0001536_a2-step-2-900g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/a2-step-2-900g">A2 Platinum 白金婴幼儿奶粉 2段 900g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$43.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="565"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="565">
+                                    <a href="javascript:void(0);" class="add left" data-id="565"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="565"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/a2-step-1-900g">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0001533_a2-step-1-900g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/a2-step-1-900g">A2 Platinum 白金婴幼儿奶粉 1段 900g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$34.50</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="798"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="798">
+                                    <a href="javascript:void(0);" class="add left" data-id="798"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="798"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/aptamil-gold-step-2-900g">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000268_aptamil-gold-2-follow-on-formula-6-12-months-900g-stage-2.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/aptamil-gold-step-2-900g">Aptamil 爱他美 金装奶粉 2阶</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$29.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="797"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="797">
+                                    <a href="javascript:void(0);" class="add left" data-id="797"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="797"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/swisse-calcium-vatamind-150c">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000284_swisse-ultiboost-calcium-vitamin-d-150-tablets.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/swisse-calcium-vatamind-150c">Swisse 维他命D钙片 150粒</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$12.50</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="664"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="664">
+                                    <a href="javascript:void(0);" class="add left" data-id="664"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="664"></a>
+                            </div>
+                        </div>
+                    </li>
+                <li>
+                    <div class="fenlei_neirong_ul_main" style="border: none;">
+                        <a href="/Mobile/Category/Index/1" class="fenlei_neirong_ul_main_a">
+                            <div class="products_kuang">
+                                <img src="picture/more.jpg" style="width:100%;" />
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fenlei_neirong">
+            <div class="index_pro_tl clearfix three_tl">
+                <span class="left">营养保健</span>
+                <a class="right" href="/Mobile/Category/Index/2">更多</a>
+            </div>
+            <ul class="fenlei_neirong_ul clearfix">
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/swisse-calcium-vatamind-150c">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000284_swisse-ultiboost-calcium-vitamin-d-150-tablets.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/swisse-calcium-vatamind-150c">Swisse 维他命D钙片 150粒</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$12.50</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="664"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="664">
+                                    <a href="javascript:void(0);" class="add left" data-id="664"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="664"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/swisse-liver-detox-120t">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000288_swisse-ultiboost-liver-detox-120-tablets.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/swisse-liver-detox-120t">Swisse 护肝片 120粒</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$15.50</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="701"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="701">
+                                    <a href="javascript:void(0);" class="add left" data-id="701"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="701"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/swisse-cranberry-25000mg-30c">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000295_swisse-ultiboost-high-strength-cranberry-30-capsules.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/swisse-cranberry-25000mg-30c">Swisse 高效蔓越莓 30粒</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$11.30</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="643"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="643">
+                                    <a href="javascript:void(0);" class="add left" data-id="643"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="643"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/swisse-hair-skin-nail-500m">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000859_swisse-hair-skin-nail-500ml.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/swisse-hair-skin-nail-500m">Swisse 血橙胶原蛋白液 500ml</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$18.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="695"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="695">
+                                    <a href="javascript:void(0);" class="add left" data-id="695"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="695"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/bm-glucosamine-180c">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000310_blackmores-glucosamine-1500mg-180.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/bm-glucosamine-180c">Blackmores 维骨力关节灵腰椎颈椎1500mg 180粒</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$24.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="530"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="530">
+                                    <a href="javascript:void(0);" class="add left" data-id="530"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="530"></a>
+                            </div>
+                        </div>
+                    </li>
+                <li>
+                    <div class="fenlei_neirong_ul_main" style="border: none;">
+                        <a href="/Mobile/Category/Index/2" class="fenlei_neirong_ul_main_a">
+                            <div class="products_kuang">
+                                <img src="picture/more.jpg" style="width:100%;" />
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fenlei_neirong">
+            <div class="index_pro_tl clearfix three_tl">
+                <span class="left">美妆护肤</span>
+                <a class="right" href="/Mobile/Category/Index/3">更多</a>
+            </div>
+            <ul class="fenlei_neirong_ul clearfix">
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/gm-lanolin-oil-250g">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000387_gm-cosmetics-australian-lanolin-day-cream-250g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/gm-lanolin-oil-250g">GM 绵羊油 250g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$2.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="752"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="752">
+                                    <a href="javascript:void(0);" class="add left" data-id="752"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="752"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/eaoron-protein-cream-10ml">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000858_essence-protein-cream-10ml.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/eaoron-protein-cream-10ml">Eaoron 塗抹式水光針 10ml</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$16.50</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="59"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="59">
+                                    <a href="javascript:void(0);" class="add left" data-id="59"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="59"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/du-it-tough-hands-150g">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000368_duit-tough-hands-intensive-repair-150ml.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/du-it-tough-hands-150g">Du&#39;it 急救手膜手霜5日见效 150ml</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$7.50</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="724"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="724">
+                                    <a href="javascript:void(0);" class="add left" data-id="724"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="724"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/femfresh-daily-wash-250ml">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000830_femfresh-daily-wash-.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/femfresh-daily-wash-250ml">Femfresh  女性私密处洗液无皂洋甘菊型</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$4.80</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="478"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="478">
+                                    <a href="javascript:void(0);" class="add left" data-id="478"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="478"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/natio-rosewater-toner-250ml">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000573_natio-skin-toner-rosewater-chamomile-250ml.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/natio-rosewater-toner-250ml">Natio 娜迪奥玫瑰甘菊爽肤水 250ml</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$9.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="566"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="566">
+                                    <a href="javascript:void(0);" class="add left" data-id="566"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="566"></a>
+                            </div>
+                        </div>
+                    </li>
+                <li>
+                    <div class="fenlei_neirong_ul_main" style="border: none;">
+                        <a href="/Mobile/Category/Index/3" class="fenlei_neirong_ul_main_a">
+                            <div class="products_kuang">
+                                <img src="picture/more.jpg" style="width:100%;" />
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fenlei_neirong">
+            <div class="index_pro_tl clearfix three_tl">
+                <span class="left">家居生活</span>
+                <a class="right" href="/Mobile/Category/Index/84">更多</a>
+            </div>
+            <ul class="fenlei_neirong_ul clearfix">
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/red-seal-blacktrap-molasses">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000319_red-seal-molasses-500g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/red-seal-blacktrap-molasses">Red Seal Blacktrap Molasses</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$3.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="624"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="624">
+                                    <a href="javascript:void(0);" class="add left" data-id="624"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="624"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/gamophen-medicated-soap">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000598_gamophen-antibacterial-medicated-soap-100g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/gamophen-medicated-soap">Gamophen 药用抗菌皂香皂100g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$1.40</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="631"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="631">
+                                    <a href="javascript:void(0);" class="add left" data-id="631"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="631"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/lam-cream-for-aht-foot">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000670_lamisil-cream-15g-limit-of-one-per-order.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/lam-cream-for-aht-foot">Lamisil Cream 治真菌足癣 脚癣 脚气膏 15g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$13.50</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="757"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="757">
+                                    <a href="javascript:void(0);" class="add left" data-id="757"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="757"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/goat-soap-kids-cw-100g">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0001570_goat-soap-kids-cw-100g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/goat-soap-kids-cw-100g">Goat Soap Kids 羊奶皂 儿童版 100g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$1.90</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="110"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="110">
+                                    <a href="javascript:void(0);" class="add left" data-id="110"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="110"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/hc-propolis-toothpaste">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000162_healthy-care-propolis-toothpaste-120g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/hc-propolis-toothpaste">Healthy Care 蜂胶牙膏 120g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$2.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="508"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="508">
+                                    <a href="javascript:void(0);" class="add left" data-id="508"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="508"></a>
+                            </div>
+                        </div>
+                    </li>
+                <li>
+                    <div class="fenlei_neirong_ul_main" style="border: none;">
+                        <a href="/Mobile/Category/Index/84" class="fenlei_neirong_ul_main_a">
+                            <div class="products_kuang">
+                                <img src="picture/more.jpg" style="width:100%;" />
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fenlei_neirong">
+            <div class="index_pro_tl clearfix three_tl">
+                <span class="left">健康美食</span>
+                <a class="right" href="/Mobile/Category/Index/88">更多</a>
+            </div>
+            <ul class="fenlei_neirong_ul clearfix">
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/devondale-lightest-power-1kg">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000281_devondale-lightest-power-1kg.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/devondale-lightest-power-1kg">Devondale 德运成人奶粉 脱脂 1kg</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$9.20</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="570"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="570">
+                                    <a href="javascript:void(0);" class="add left" data-id="570"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="570"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/maxigens-full-cream1kg">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000671_maxigenes-1kg.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/maxigens-full-cream1kg">Maxigenes 美可卓蓝胖子成人奶粉 1kg</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$13.80</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="737"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="737">
+                                    <a href="javascript:void(0);" class="add left" data-id="737"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="737"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/hc-propolis-2000mg-200c">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000304_healthy-care-propolis-2000mg-200-capsules.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/hc-propolis-2000mg-200c">Healthy Care  黑蜂胶 2000mg 200粒</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$15.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="620"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="620">
+                                    <a href="javascript:void(0);" class="add left" data-id="620"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="620"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/wild-cranberry-whole-dried-250g">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000438_dried-cranberry-whole-250g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/wild-cranberry-whole-dried-250g">Market Grocer Dried Cranberry Whole 蔓越莓干 250g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$3.95</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="641"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="641">
+                                    <a href="javascript:void(0);" class="add left" data-id="641"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="641"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fenlei_neirong_ul_main">
+                            <a class="fenlei_neirong_ul_main_a" href="/Mobile/Product/crispy-coconut-rolls-265g">
+                                <div class="products_kuang main_img">
+                                    <img src="picture/0000816_crispy-coconut-rolls-265g.jpeg" />
+                                    
+                                </div>
+                            </a>
+                            <p class="fenlei_neirong_ul_main_tl">
+                                <a href="/Mobile/Product/crispy-coconut-rolls-265g">Crispy 椰子卷 265g</a>
+                            </p>
+                            <div class="fenlei_neirong_b">
+                                <span class="color_red">$7.50</span>
+                                <div class="clearfix sum">
+                                    <a href="javascript:void(0);" class="min left" data-id="1416"></a>
+                                    <input class="text_box left" name="" type="text" value="1" data-id="1416">
+                                    <a href="javascript:void(0);" class="add left" data-id="1416"></a>
+                                </div>
+
+                                    <a href="javascript:void(0);" class="buy" data-id="1416"></a>
+                            </div>
+                        </div>
+                    </li>
+                <li>
+                    <div class="fenlei_neirong_ul_main" style="border: none;">
+                        <a href="/Mobile/Category/Index/88" class="fenlei_neirong_ul_main_a">
+                            <div class="products_kuang">
+                                <img src="picture/more.jpg" style="width:100%;" />
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="fenlei_neirong">
+            <div class="index_pro_tl clearfix three_tl">
+                <span class="left">时尚</span>
+                <a class="right" href="/Mobile/Category/Index/105">更多</a>
+            </div>
+            <ul class="fenlei_neirong_ul clearfix">
+                <li>
+                    <div class="fenlei_neirong_ul_main" style="border: none;">
+                        <a href="/Mobile/Category/Index/105" class="fenlei_neirong_ul_main_a">
+                            <div class="products_kuang">
+                                <img src="picture/more.jpg" style="width:100%;" />
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+    
+    
+</div>
+
+    <!--弹窗开始-->
+<div class="clearfix" style="margin-bottom: 100px;" id="outsideAlertView">
+    <div class="verify out_alert alert">
+        <div class="alert_btn">
+            <b><a href="javascript:void(0)" id="alertConfirm" class="verify_btn color_red"></a></b>
+        </div>
+    </div>
+    <!--加载中-->
+    <div class="alert_bg"></div>
+    <div class="loading">
+        <div class="loading_con">
+            <img src="picture/loading.png" />
+            <p>
+                玩命加载中……
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--关键词搜索-->
+<div class="guanjianci">
+    <div class="head user_head">
+        关健搜索
+        <a href="javascript:;" class="cha"></a>
+    </div>
+    <div class="guanjianci_main">
+        <div class="guanjianci_tl clearfix">
+            <a href="javascript:;" class="ahover">产品</a>
+            <a href="javascript:;">品牌</a>
+        </div>
+        <div class="guanjianci_input">
+<form action="/Mobile/Category/Search" method="get">                <div class="guanjianci_input_con active">
+                    <div class="search_top_main clearfix active">
+                        <input type="text" class="search_top_main_lf" placeholder="请输入关键词" />
+                        <input type="submit" class="right search_top_main_btn" value="" />
+                    </div>
+                </div>
+                <div class="guanjianci_input_con">
+                    <div class="search_top_main clearfix">
+                        <input type = "text" class="search_top_main_lf" placeholder="请输入品牌" />
+                        <input type = "submit" class="search_top_main_btn right" value="" />
+                    </div>
+                </div>
+                <input type="hidden" id="keyword" name="keyword" value="aaa" />
+</form>        </div>
+        <div class="remen">
+            <div class="remen_tl">热门搜索</div>
+            <div class="remen_a clearfix">
+                <a href="/Mobile/Category/Search?keyword=Aptamil">爱他美</a>
+                <a href="/Mobile/Category/Search?keyword=Bellamy">贝拉米</a>
+                <a href="/Mobile/Category/Search?keyword=A2">A2</a>
+                <a href="/Mobile/Category/Search?keyword=Swisse">Swisse</a>
+                <a href="/Mobile/Category/Search?keyword=Blackmores">Blackmores</a>
+                <a href="/Mobile/Category/Search?keyword=Healthy%20Care">Healthy Care</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.buy').click(function () {
+                
+                window.location.href = "/Mobile/Login/Login?returnUrl=%2FMobile%2F";
+                
+        });
+
+        $(".add").click(function () {
+            productId = $(this).attr("data-id");
+            textInput = $("input[data-id=" + productId + "]");
+
+            quantity = isNaN(textInput.val()) ? 1 : parseInt(textInput.val());
+            textInput.val(quantity + 1);
+        })
+        $(".min").click(function () {
+            productId = $(this).attr("data-id");
+            textInput = $("input[data-id=" + productId + "]");
+
+            quantity = isNaN(textInput.val()) ? 1 : parseInt(textInput.val());
+            textInput.val(quantity - 1);
+            if (parseInt(textInput.val()) < 0) {
+                textInput.val(0);
+            }
+        })
+    })
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $.ajax({
+            method: "GET",
+            url: "/Mobile/Index/Banners"
+        })
+        .done(function (banners) {
+            $.each(banners, function (index, data) {
+                $("#banner_a_" + index).attr("src", "/Areas/Mobile/images/banners/" + data.FileName);
+            })
+        });
+
+        $('#home_slider').flexslider({
+            animation: 'slide',
+            controlNav: true,
+            directionNav: false,
+            animationLoop: true,
+            slideshow: true,
+            useCSS: false
+        });
+    });
+</script>
+
+
+    <!--尾部-->
+<div class="footer">
+    <ul class="clearfix footer_ul">
+        <li>
+            <a href="/Mobile">
+                <div class="footer_img">
+                    <img src="picture/shouye_ico.png" class="img_q" />
+                    <img src="picture/shouye_icoh.png" class="img_h" />
+                </div>
+                <p>
+                    首页
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(Tawk_API.toggle())">
+                <div class="footer_img">
+                    <img src="picture/footer_kefu.png" class="img_q" />
+                    <img src="picture/footer_kefuh.png" class="img_h" />
+                </div>
+                <p>
+                    客服
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Purchase/ShoppingCart" class="gouwuche" id="bottomCart">
+                <div class="footer_img" >
+                    <img src="picture/gouwudai.png" class="img_q" />
+                    <img src="picture/gouwudaih.png" class="img_h" />
+                    <span class="num" id="ecsCartInfo"></span>
+                </div>
+                <p>
+                    购物袋
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User">
+                <div class="footer_img">
+                    <img src="picture/mine.png" class="img_q" />
+                    <img src="picture/mineh.png" class="img_h" />
+                </div>
+                <p>
+                    我的
+                </p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript" src="js/qin.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5768107cb57c0500209794b6/1arrsi0jq';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+<!--Start of Google Analytics Script-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80632807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End of Google Analytics Script-->
+<!--   回到顶部-->
+<em class="topbtn"></em>
+<script type="text/javascript" src="js/qin.js"></script>
+    
+</body>
+</html>

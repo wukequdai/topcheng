@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/mobileredirect.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#26c5cf">
+    <title>51购悉尼代发平台 - 结算中心 </title>
+    <meta name="Description" content="">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/init.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    
+
+    
+
+    
+</head>
+<body>
+    <!--头部开始-->
+<div class="head_fix">
+    <div class="head user_head clearfix">
+        <a href="javascript:history.back(-1)" class="head_back"></a>
+        结算中心
+        <div class="daohang">
+    <em></em>
+    <ul class="daohang_yin">
+        <span class="sj"></span>
+        <li>
+            <a href="/Mobile" class="clearfix">
+                <img src="images/head_menu_shouye.png" /> 首页
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Category" class="clearfix">
+                <img src="images/head_menu_fenlei.png" /> 分类
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User" class="clearfix">
+                <img src="images/head_menu_zhanghu.png" /> 我的账户
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Order?orderStatus=0" class="clearfix">
+                <img src="images/head_menu_dingdan.png" /> 我的订单
+            </a>
+        </li>
+    </ul>
+</div>
+    </div>
+</div>
+
+    
+
+<div class="main_user car_main">
+    <!--内容开始-->
+    <div class="jiesuan_main">
+        <div class="user_order_tl clearfix">
+            <span class="left">收货人信息</span>
+            <a href="/Mobile/User/ConsigneeList?returnUrl=%2FMobile%2FPurchase%2FCheckout" class="right">更改地址</a>
+        </div>
+        <div class="jiesuan_permess">
+                <div class="dingdan_li_mess_gp clearfix">
+                    <span class="shouhuoren_name">测试</span>
+                    <span class="shouhuoren_phone">15295105536</span>
+                </div>
+                <div class="dingdan_li_mess_gp clearfix">
+                    <span class="dizhi">
+                        
+                        泰兴人才科技广场
+                    </span>
+                </div>
+                <a href="/Mobile/User/ConsigneeCreate?returnUrl=%2FMobile%2FPurchase%2FCheckout" class="jiesuan_permess_add"></a>
+            <input type="hidden" id="addressId" value="128632" />
+        </div>
+
+    </div>
+    <div class="jiesuan_main border-top">
+        <div class="user_order_tl clearfix">
+            <span class="left">寄件人信息 </span>
+            <a href="/Mobile/User/SenderList?returnUrl=%2FMobile%2FPurchase%2FCheckout" class="right">更改寄件人</a>
+        </div>
+        <div class="jiesuan_permess">
+                <div class="dingdan_li_mess_gp clearfix">
+                    <span class="shouhuoren_name">陆城城</span>
+                    <span class="shouhuoren_phone">15295105536</span>
+                </div>
+                <a href="/Mobile/User/SenderCreate?returnUrl=%2FMobile%2FPurchase%2FCheckout" class="jiesuan_permess_add"></a>
+            <input type="hidden" id="senderId" value="1328" />
+        </div>
+    </div>
+
+<form action="/Mobile/Purchase/ConfirmOrder" method="post">        <div class="jiesuan_main">
+            <div class="user_order_tl clearfix">
+                <span class="left">快递选择</span>
+            </div>
+            <div class="kuaidi">
+                <input id="ShippingMethodId" name="ShippingMethodId" type="hidden" value="0" />
+                <ul class="kuaidi_ul clearfix">
+                            <li class="shippingMethods">
+                                <a href="javascript:void(0);" date-id="2">EWE <span date-id="2">$5.62</span></a>
+                            </li>
+                            <li class="shippingMethods">
+                                <a href="javascript:void(0);" date-id="1">澳邮 <span date-id="1">$5.62</span></a>
+                            </li>
+                            <li class="shippingMethods">
+                                <a href="javascript:void(0);" date-id="5">重庆中环 <span date-id="5">$7.50</span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="disabled" date-id="3" style="color:#e5e5e5;border: 1px solid #e5e5e5;">澳德 (不可用)</a>
+                            </li>
+                </ul>
+            </div>
+            <div class="parcelSelection">
+                   <div class="parcel_expCom zeng">
+                    <div class="zeng_tl">EWE - 共 1 箱 - $5.62</div>
+                    <ul class="zeng_ul">
+                            <li class="clearfix">
+                                <div class="left zeng_ul_li_main">
+                                        <p>1 * A2 Platinum 白金婴幼儿奶粉 3段 900g</p>
+                                    <p>EWE奶粉线E($4.50/kg) - 约1.25kg</p>
+                                </div>
+                                <span class="right zeng_ul_li_main zeng_ul_li_main_rt"><span>$5.62</span></span>
+                            </li>
+                    </ul>
+                </div>
+                   <div class="parcel_expCom zeng">
+                    <div class="zeng_tl">澳邮 - 共 1 箱 - $5.62</div>
+                    <ul class="zeng_ul">
+                            <li class="clearfix">
+                                <div class="left zeng_ul_li_main">
+                                        <p>1 * A2 Platinum 白金婴幼儿奶粉 3段 900g</p>
+                                    <p>澳邮($4.50/kg) - 约1.25kg</p>
+                                </div>
+                                <span class="right zeng_ul_li_main zeng_ul_li_main_rt"><span>$5.62</span></span>
+                            </li>
+                    </ul>
+                </div>
+                   <div class="parcel_expCom zeng">
+                    <div class="zeng_tl">重庆中环 - 共 1 箱 - $7.50</div>
+                    <ul class="zeng_ul">
+                            <li class="clearfix">
+                                <div class="left zeng_ul_li_main">
+                                        <p>1 * A2 Platinum 白金婴幼儿奶粉 3段 900g</p>
+                                    <p>澳中奶粉线($6.00/kg) - 约1.25kg</p>
+                                </div>
+                                <span class="right zeng_ul_li_main zeng_ul_li_main_rt"><span>$7.50</span></span>
+                            </li>
+                    </ul>
+                </div>
+                   <div class="parcel_expCom zeng">
+                    <div class="zeng_tl">澳德 - 共 0 箱 - $0.00</div>
+                    <ul class="zeng_ul">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="jiesuan_main border-top">
+            <div class="user_order_tl clearfix">
+                <span class="left">其他信息</span>
+            </div>
+            <div class="jiesuan_qita">
+                <div class="jiesuan_qita_main clearfix">
+                    <span class="left">备注</span>
+                    <input class="right text-box single-line" id="CustomerNote" name="CustomerNote" type="text" value="" />
+                </div>
+            </div>
+        </div>
+        <!--支付方式-->
+        <div class="zhifu_mess">
+            <div class="user_order_tl clearfix">
+                <span class="left">选择支付方式</span>
+            </div>
+            <div class="zhifu_qiehuan">
+                <input id="PaymentMethodId" name="PaymentMethodId" type="hidden" value="7">
+                <ul class="zhifu_qiehuan_tl clearfix">
+                            <li data-id="7">
+                                <a href="javascript:void(0);" data-id="7" class="active payment">
+                                    <img src="images/zhifu/zhifu.jpg" class="img_q" />
+                                    <img src="images/zhifu/zhifuh.jpg" class="img_h" />
+                                </a>
+                            </li>
+                            <li data-id="10" class="wechat_pay">
+                                <a href="javascript:void(0);" class="payment" data-id="10">
+                                    <img src="images/zhifu/weixin.jpg" class="img_q" />
+                                    <img src="images/zhifu/weixinh.jpg" class="img_h" />
+                                </a>
+                            </li>
+                            <li data-id="4">
+                                <a href="javascript:void(0);" class="payment" data-id="4">
+                                    <img src="images/zhifu/qian.jpg" class="img_q" />
+                                    <img src="images/zhifu/qianh.jpg" class="img_h" />
+                                </a>
+                            </li>
+                            <li data-id="5">
+                                <a href="javascript:void(0);" class="payment" data-id="5">
+                                    <img src="images/zhifu/ka.png" class="img_q" />
+                                    <img src="images/zhifu/kah.jpg" class="img_h" />
+                                </a>
+                            </li>
+                </ul>
+                <div class="zhifu_qiehuan_main">
+                            <div data-id="7" class="zhifu_qiehuan_con active">
+                                <div class="zhifubao_cankao"><b>支付宝（+2%手续费）</b></div>
+                                <div class="zhifubao_cankao">
+                                    支付宝 实际汇率 即时到账。今日参考汇率 <strong><span>5.2000</span></strong><br />
+                                </div>
+                            </div>
+                            <div data-id="10" class="zhifu_qiehuan_con wechat_pay">
+                                <div class="zhifubao_cankao"><b>微信（+1.5%手续费）</b></div>
+                                <div class="zhifubao_cankao">
+                                    微信 实际汇率 即时到账。今日参考汇率 <strong><span>5.1964</span></strong><br />
+                                </div>
+                            </div>
+                            <div data-id="4" class="zhifu_qiehuan_con">
+                                <div class="zhifubao_cankao"><b>银行转账</b></div>
+                                <div class="zhifubao_cankao">
+                                    银行转账支付需要上传转账凭证,需要后台审核并确认订单为已支付状态
+                                </div>
+                            </div>
+                            <div data-id="5" class="zhifu_qiehuan_con">
+                                <div class="zhifubao_cankao"><b>预存款</b></div>
+                                <div class="zhifubao_cankao">
+                                    扣款后，预存款必须有1000澳元以上，否则不能用预存款支付, 只能用信用卡支付或取消VIP资格后再用预存款支付。
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $('.payment').click(function () {
+                $("#PaymentMethodId").val($(this).attr("data-id"));
+            });
+
+            if (!isWeChatBrowser()) {
+                $('.wechat_pay').hide();
+            }
+        })
+        </script>
+        <div class="jiesuan_main border-top jiesuan_xinxi">
+            <div class="user_order_tl clearfix">
+                <span class="left">积分使用</span>
+                
+            </div>
+            <div class="jiesun_xinxi_main">
+                <p class="jifen_text">
+                    目前积分：<span class="color_red"><span id="rewardPoints">0分</span></span>
+                </p>
+                <div class="jifenxuan">
+                    <div class="jifen_text jifen_gouxuan">
+                            <span>
+                                累计达到 100 方可使用<span id="rewardPointsDollars"></span>积分
+                            </span>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="dingdancon_main zhangdan border-top">
+            <ul>
+                <li class="clearfix">
+                    <div class="left zhangdan_li">
+                        <img src="images/dingdancon/zongjia.png">
+                        商品总价
+                    </div>
+                    <div class="right zhangdan_price" id="orderSubtotal">$35.95</div>
+                </li>
+                <li class="clearfix">
+                    <div class="left zhangdan_li">
+                        <img src="images/dingdancon/yunfei.png">
+                        运费（国际快递）
+                    </div>
+                    <div class="right zhangdan_price" id="orderShipping">$0.00</div>
+                </li>
+                <li class="clearfix">
+                    <div class="left zhangdan_li">
+                        <img src="images/dingdancon/dingdanzongjia.png">
+                        订单总价
+                    </div>
+                    <div class="right zhangdan_price" id="orderTotal">$35.95</div>
+                </li>
+                <li class="clearfix">
+                    <div class="left zhangdan_li">
+                        <img src="images/dingdancon/youhui.png">
+                        积分抵扣
+                    </div>
+                    <div class="right zhangdan_price" id="rewardPointsUsed">$0.00</div>
+                </li>
+                <li class="clearfix">
+                    <div class="left zhangdan_li" style="width: 98%;">
+                        <span style="color:red;">*&nbsp;</span>打包费用，拍照，打包材料，英文报纸，罐底签名全部免费
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--结算-->
+        <div class="jiesuan clearfix jiesuanyemian">
+            <div class="left jiesuan_lf clearfix">
+                <div class="jiesuan_mess">
+                    实际总计： <span class="color_red" id="dueTotal">$35.95</span><br />
+                    可获积分：35 积分
+                </div>
+            </div>
+            <input type="submit" class="right btn_red jiesuanbtn" value="去支付" />
+        </div>
+</form></div>
+
+<!--弹窗开始-->
+
+    <!--弹窗开始-->
+<div class="clearfix" style="margin-bottom: 100px;" id="outsideAlertView">
+    <div class="verify out_alert alert">
+        <div class="alert_btn">
+            <b><a href="javascript:void(0)" id="alertConfirm" class="verify_btn color_red"></a></b>
+        </div>
+    </div>
+    <!--加载中-->
+    <div class="alert_bg"></div>
+    <div class="loading">
+        <div class="loading_con">
+            <img src="images/loading.png" />
+            <p>
+                玩命加载中……
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $("form").submit(function () {
+        if ($("#addressId").val() == 0) {
+            AlertMsg("请选择收货地址");
+            return false;
+        }
+        else if ($("#senderId").val() == 0)
+        {
+            AlertMsg("请选择寄件人地址");
+            return false;
+        }
+        else if ($("#ShippingMethodId").val() == 0)
+        {
+            AlertMsg("请选择邮寄快递");
+            return false;
+        }
+        else if($("#PaymentMethodId").val() == 0)
+        {
+            AlertMsg("请选择支付方式");
+            return false;
+        }
+        else if (rewardPointsPoints > rewardPoints) {
+            AlertMsg("积分少于兑换要求");
+            return false;
+        }
+        else if($("#ShippingMethodId").val() > 0 && $("#PaymentMethodId").val() > 0){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    })
+
+    var orderSubtotal = parseFloat($("#orderSubtotal").text().replace("$", ""));
+    var rewardPoints = parseFloat($("#rewardPoints").text().replace("$", ""));
+    var rewardPointsPoints = parseFloat($("#rewardPointsPoints").text().replace("$", ""));
+    var rewardPointsDollars = parseFloat($("#rewardPointsDollars").text().replace("$", ""));
+    var orderShipping = 0;
+    var orderTotal = parseFloat($("#orderSubtotal").text().replace("$", ""));
+    var scale = 100;
+    refreshDateDisplay();
+
+    $('.shippingMethods').click(function () {
+        var shippingId= $(this).children(0).attr("date-id");
+        $("#ShippingMethodId").val(shippingId);
+        orderShipping = $("span[date-id=" + shippingId + "]").text().replace("$", "");
+        orderTotal = (parseFloat(orderShipping.replace(/[$,]+/g, "")) + parseFloat($("#orderSubtotal").text().replace(/[$,]+/g, "")));
+
+        var index = $(this).index();
+        $(this).addClass('ahover').siblings().removeClass('ahover');
+        $(".parcel_expCom").siblings().removeClass('shown');
+        $(".parcel_expCom").eq(index).addClass('shown');
+
+        removeLastLineInFreight();
+        refreshDateDisplay();
+    });
+
+    
+    $("#UseRewardPoints").click(function () {
+        if($(this).prop("checked"))
+        {
+            rewardPointsDollars = parseFloat($("#rewardPointsDollars").text().replace("$", ""));
+        }
+        else {
+            rewardPointsDollars = 0;
+        }
+        refreshDateDisplay();
+    })
+    
+
+    function removeLastLineInFreight() {
+        $('.zeng.shown .zeng_ul li').last().css("border-bottom", "0px solid #dddddd");
+    }
+
+    function refreshDateDisplay()
+    {
+        rewardPointsDollars = isNaN(rewardPointsDollars) ? 0 : rewardPointsDollars;
+        var dueTotal = parseFloat(orderSubtotal) + parseFloat(orderShipping) - parseFloat(rewardPointsDollars);
+        
+        //alert(parseFloat(orderSubtotal) + "|" + parseFloat(orderShipping) + "|" + parseFloat(rewardPointsDollars));
+        $("#orderShipping").text("$" + (parseFloat(orderShipping).toFixed(2)));
+        $("#orderTotal").text("$" + (parseFloat(orderTotal).toFixed(2)));
+        $("#rewardPointsUsed").text("-$" + (parseFloat(rewardPointsDollars).toFixed(2)));
+        $("#dueTotal").text("$" + (parseFloat(dueTotal).toFixed(2)));
+    }
+
+    //$("#delConfirm").click(function () {
+    //    $(".verify").hide();
+    //    $(".alert_bg").hide();
+    //})
+
+    //function AlertMsg(msg)
+    //{
+    //    $("#delConfirm").text(msg);
+    //    $("#delConfirm").css("top", Math.max(0, (($(window).height() - $(".alert_btn").outerHeight()) / 2) + $(window).scrollTop()) + "px");
+    //    $("#delConfirm").css("left", Math.max(0, (($(window).width() - $(".alert_btn").outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+    //    $(".verify").show();
+    //    $(".alert_bg").show();
+    //}
+
+
+
+    $("#alertConfirm").click(function () {
+        $(".verify").hide();
+        $(".alert_bg").hide();
+    })
+
+    function AlertMsg(msg) {
+        $("#alertConfirm").text(msg);
+        $(".verify").css("top", Math.max(0, (($(window).height() - $(".alert_btn").outerHeight()) / 2) + $(window).scrollTop()) + "px");
+        $(".verify").css("left", Math.max(0, (($(window).width() - $(".alert_btn").outerWidth()) / 7) + $(window).scrollLeft()) + "px");
+        $(".verify").show();
+        $(".alert_bg").show();
+    }
+
+    //$('.parcel_expCom:first').addClass('shown');
+    //$('.shippingMethods:first').addClass('ahover');
+
+    //快递选择
+    //$('.shippingMethods').click(function () {
+    //    var index = $(this).index();
+    //    $(this).addClass('ahover').siblings().removeClass('ahover');
+    //    $(".parcel_expCom").siblings().removeClass('shown');
+    //    $(".parcel_expCom").eq(index).addClass('shown');
+    //});
+
+
+    $('a.disabled').click(function () {
+        $('.parcel_expCom.shown').removeClass('shown');
+        $("#ShippingMethodId").val(0);
+        orderShipping = 0;
+        orderTotal = (parseFloat($("#orderSubtotal").text().replace(/[$,]+/g, "")));
+        refreshDateDisplay();
+    });
+})
+
+</script>
+
+
+
+
+    <!--尾部-->
+<div class="footer">
+    <ul class="clearfix footer_ul">
+        <li>
+            <a href="/Mobile">
+                <div class="footer_img">
+                    <img src="images/footer/shouye_ico.png" class="img_q" />
+                    <img src="images/footer/shouye_icoh.png" class="img_h" />
+                </div>
+                <p>
+                    首页
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(Tawk_API.toggle())">
+                <div class="footer_img">
+                    <img src="images/footer/footer_kefu.png" class="img_q" />
+                    <img src="images/footer/footer_kefuh.png" class="img_h" />
+                </div>
+                <p>
+                    客服
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Purchase/ShoppingCart" class="gouwuche" id="bottomCart">
+                <div class="footer_img" >
+                    <img src="images/footer/gouwudai.png" class="img_q" />
+                    <img src="images/footer/gouwudaih.png" class="img_h" />
+                    <span class="num" id="ecsCartInfo"></span>
+                </div>
+                <p>
+                    购物袋
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User">
+                <div class="footer_img">
+                    <img src="images/footer/mine.png" class="img_q" />
+                    <img src="images/footer/mineh.png" class="img_h" />
+                </div>
+                <p>
+                    我的
+                </p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Mobile/Purchase/GetCartItemCount",
+            type: "POST",
+            success: function (data) {
+                $("#ecsCartInfo").text(data.cart_total);
+            }
+        });
+    })
+</script>
+
+<script type="text/javascript" src="js/qin.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5768107cb57c0500209794b6/1arrsi0jq';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+<!--Start of Google Analytics Script-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80632807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End of Google Analytics Script-->
+    
+</body>
+</html>

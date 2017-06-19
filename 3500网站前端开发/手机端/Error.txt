@@ -1,0 +1,2 @@
+﻿文件下载网址  =>  文件保存路径
+https://www.51go.com.au/Areas/mobile/images/index_14.jpg  =>  G:\chengxubao\www.51go.com.au\images\index_14.jpg

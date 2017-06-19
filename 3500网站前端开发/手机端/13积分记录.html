@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="/Js/mobileredirect.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#26c5cf">
+    <title>51购悉尼代发平台 - 积分记录 </title>
+    <meta name="Description" content="">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/init.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    
+
+    
+
+    
+</head>
+<body>
+    <!--头部开始-->
+<div class="head_fix">
+    <div class="head user_head clearfix">
+        <a href="javascript:history.back(-1)" class="head_back"></a>
+        积分记录
+        <div class="daohang">
+    <em></em>
+    <ul class="daohang_yin">
+        <span class="sj"></span>
+        <li>
+            <a href="/Mobile" class="clearfix">
+                <img src="images/head_menu_shouye.png" /> 首页
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Category" class="clearfix">
+                <img src="images/head_menu_fenlei.png" /> 分类
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User" class="clearfix">
+                <img src="images/head_menu_zhanghu.png" /> 我的账户
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Order?orderStatus=0" class="clearfix">
+                <img src="images/head_menu_dingdan.png" /> 我的订单
+            </a>
+        </li>
+    </ul>
+</div>
+    </div>
+</div>
+
+    
+
+<div class="main">
+    <div class="yucun_shuoming">
+        <div class="user_order_tl clearfix">
+            <span class="left">积分记录 </span>
+            
+        </div>
+        <div class="shouhuoren">
+            
+            <p class="shouhuoren_place">
+                积分余额：<span class="color_red">0</span>
+            </p>
+        </div>
+    </div>
+
+    <!--消费记录-->
+        <div class="con_null">
+            <img src="images/null_dingdan.png" />
+            <p>目前您还没有积分累计~~</p>
+            <a href="/Mobile/Category" class="btn btn_blue con_null_btn">马上逛逛</a>
+        </div>
+    <div style="" class="pagenav-wrapper" id="J_PageNavWrap">
+
+    </div>
+
+    
+
+
+</div>
+
+    <!--尾部-->
+<div class="footer">
+    <ul class="clearfix footer_ul">
+        <li>
+            <a href="/Mobile">
+                <div class="footer_img">
+                    <img src="images/footer/shouye_ico.png" class="img_q" />
+                    <img src="images/footer/shouye_icoh.png" class="img_h" />
+                </div>
+                <p>
+                    首页
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(Tawk_API.toggle())">
+                <div class="footer_img">
+                    <img src="images/footer/footer_kefu.png" class="img_q" />
+                    <img src="images/footer/footer_kefuh.png" class="img_h" />
+                </div>
+                <p>
+                    客服
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Purchase/ShoppingCart" class="gouwuche" id="bottomCart">
+                <div class="footer_img" >
+                    <img src="images/footer/gouwudai.png" class="img_q" />
+                    <img src="images/footer/gouwudaih.png" class="img_h" />
+                    <span class="num" id="ecsCartInfo"></span>
+                </div>
+                <p>
+                    购物袋
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User">
+                <div class="footer_img">
+                    <img src="images/footer/mine.png" class="img_q" />
+                    <img src="images/footer/mineh.png" class="img_h" />
+                </div>
+                <p>
+                    我的
+                </p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Mobile/Purchase/GetCartItemCount",
+            type: "POST",
+            success: function (data) {
+                $("#ecsCartInfo").text(data.cart_total);
+            }
+        });
+    })
+</script>
+
+<script type="text/javascript" src="/Areas/mobile/js/qin.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5768107cb57c0500209794b6/1arrsi0jq';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+<!--Start of Google Analytics Script-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80632807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End of Google Analytics Script-->
+    
+</body>
+</html>

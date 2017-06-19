@@ -1,0 +1,567 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/mobileredirect.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#26c5cf">
+    <title>51购悉尼代发平台 - 购物车 </title>
+    <meta name="Description" content="">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/init.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+</head>
+<body>
+    <!--头部开始-->
+<div class="head_fix">
+    <div class="head user_head clearfix">
+        <a href="javascript:history.back(-1)" class="head_back"></a>
+        购物车
+        <div class="daohang">
+    <em></em>
+    <ul class="daohang_yin">
+        <span class="sj"></span>
+        <li>
+            <a href="/Mobile" class="clearfix">
+                <img src="images/head_menu_shouye.png" /> 首页
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Category" class="clearfix">
+                <img src="images/head_menu_fenlei.png" /> 分类
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User" class="clearfix">
+                <img src="images/head_menu_zhanghu.png" /> 我的账户
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Order?orderStatus=0" class="clearfix">
+                <img src="images/head_menu_dingdan.png" /> 我的订单
+            </a>
+        </li>
+    </ul>
+</div>
+    </div>
+</div>
+
+    
+
+<div class="main car_main">
+        <!--内容开始-->
+        <div class="clearfix car_top">
+            <div class="checkboxFive left">
+                <input type="checkbox" id="checkboxInputTop" name="checkname">
+                <label for="checkboxInputTop"></label>
+            </div>
+            <span class="left">全选</span>
+        </div>
+<form action="/Mobile/Purchase/Checkout" id="cart_form" method="post">            <ul class="car_ul">
+                    <li data-id="405">
+                        <div class="car_li">
+                            <input data-val="true" data-val-number="The field ProductId must be a number." data-val-required="The ProductId field is required." id="Items_0__ProductId" name="Items[0].ProductId" type="hidden" value="405" />
+                            <div class="car_li_checkbox">
+                                <div class="checkboxFive car_check">
+                                    <input productid="405" data-val="true" data-val-required="The   field is required." id="checkbox191" name="Items[0].Selected" type="checkbox" value="true">
+                                    <label productid="405" for="labelCheck"> </label> 
+                                    <input name="Items[0].Selected" type="hidden" value="false">
+                                </div>
+                            </div>
+                            <div class="car_li_con clearfix">
+                                <div class="car_li_img left">
+                                    <a href="/Mobile/Product/a2-step-3-900g" class="left car_pro">
+                                        <img src="https://img.51go.com.au/img/200/0001539_a2-step-3-900g.jpeg" />
+                                    </a>
+                                </div>
+                                <div class="right car_li_con_rt">
+                                    <p class="car_li_tl">
+                                        <a href="/Mobile/Product/a2-step-3-900g" data-outstock="False" class="stockstatus">
+                                            A2 Platinum 白金婴幼儿奶粉 3段 900g
+                                        </a>
+                                    </p>
+                                    <p class="car_li_text">
+                                        重量：1.300kg
+                                    </p>
+                                    <div class="clearfix car_li_do">
+                                        <span class="left color_red">$35.95</span>
+                                        <div class="right clearfix">
+                                            <div class="clearfix sum left">
+                                                <a data-id="405" class="min left"></a>
+                                                <input class="text_box left text-box single-line" data-id="405" data-val="true" data-val-number="The field Quantity must be a number." data-val-required="The Quantity field is required." id="Items_0__Quantity" maxlength="5" name="Items[0].Quantity" num="num" size="4" type="number" value="1" />
+                                                <a data-id="405" class="add left"></a>
+                                            </div>
+                                            <em class="left dele" data-id="405"></em>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+            </ul>
+</form>        <div class="clearfix car_result">
+            <p>选中商品：<span id="item_count"></span> 件</p>
+            <p>邮寄总重：<span id="item_weight"></span> kg</p>
+        </div>
+        <!--结算-->
+        <div class="jiesuan clearfix">
+            <div class="left jiesuan_lf">
+                <div class="jiesuan_xuan clearfix">
+                    <div class="left checkboxFive">
+                        <input type="checkbox" id="checkboxInputBottom" name="checkname">
+                        <label for="checkboxInputBottom"></label>
+                    </div>
+                    <span class="left">全选</span>
+                </div>
+                <div class="jiesuan_mess">
+                    总计：AU$ <span id="totalPrice" class="color_red">155.80</span><br />
+                    不含运费
+                </div>
+            </div>
+            <input form="cart_form" id="cart_input" type="submit" value="去结算" class="right btn_blue jiesuanbtn">
+        </div>
+
+    <input id="modelJson" type="hidden" value='{"Items":[{"ProductId":405,"ProductName":"A2 Platinum 白金婴幼儿奶粉 3段 900g","Slug":"a2-step-3-900g","Quantity":1,"UnitPrice":35.9500,"Subtotal":35.9500,"UnitWeight":1.3000,"Weight":1.3000,"TotalRewardPoints":35.9500,"ThumbnailUrl":"https://img.51go.com.au/img/200/0001539_a2-step-3-900g.jpeg","Selected":false,"OutOfStock":false}],"ItemCount":1,"ProductCount":1}'>
+</div>
+
+    <!--弹窗开始-->
+<div class="clearfix" style="margin-bottom: 100px;" id="outsideAlertView">
+    <div class="verify out_alert alert">
+        <div class="alert_btn">
+            <b><a href="javascript:void(0)" id="alertConfirm" class="verify_btn color_red"></a></b>
+        </div>
+    </div>
+    <!--加载中-->
+    <div class="alert_bg"></div>
+    <div class="loading">
+        <div class="loading_con">
+            <img src="/Areas/Mobile/images/loading.png" />
+            <p>
+                玩命加载中……
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="out_alert alert" id="deleteAlert">
+    <p class="alert_tl">确认删除</p>
+    <div class="alert_text">
+        是否从购物车删除该产品？
+    </div>
+    <div class="alert_btn">
+        <a href="javascript:void(0);" class="quxiao" id="delCancel">取消</a>
+        <a href="javascript:void(0);" id="delConfirm" class="btn_red">删除</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+var modelJson = jQuery.parseJSON($("#modelJson").val());
+var delProductId;
+
+$(document).ready(function () {
+    $(window).keydown(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+        }
+    });
+
+    $("a.min").click(function () {
+        changeProductQuantity(this, -1);
+    });
+
+    $("a.add").click(function () {
+        changeProductQuantity(this, 1);
+    });
+
+    $('.text_box.left').change(function () {
+        changeProductQuantity(this, 0);
+    });
+
+    $('.text_box.left').keyup(function (e) {
+        if (e.which === 13) {
+            changeProductQuantity(this, 0);
+            $(this).blur();
+        }
+    });
+
+
+    function changeProductQuantity(object, diff) {
+        var productId = $(object).attr("data-id");
+        var quantity;
+
+        if (diff == 0) {
+            quantity = parseInt($("input[data-id=" + productId + "]").val());
+            quantity = isNaN(quantity) ? 1 : quantity;
+        }
+        else {
+            quantity = parseInt($("input[data-id=" + productId + "]").val()) + diff;
+        }
+        quantity = Math.round(quantity);
+
+        if (quantity < 1) {
+            quantity = 1;
+        }
+        else {
+            $.each(modelJson.Items, function () {
+                if (this.ProductId == productId) {
+                    $(".loading").show();
+                    $(".alert_bg").show();
+                    this.Quantity = quantity;
+
+                    $.ajax({
+                        url: "/Mobile/Purchase/UpdateCartItem",
+                        type: "POST",
+                        data: { cartItemId: productId, quantity: quantity },
+                        success: function (data) {
+                            $("#ecsCartInfo").text(data.cart_total);
+                            $("input[data-id=" + productId + "]").val(quantity);
+                            $(".loading").hide();
+                            $(".alert_bg").hide();
+                        }
+                    });
+                }
+            });
+        }
+
+        refeshDisplays();
+    }
+
+    init();
+
+    $(".dele").click(function () {
+        delProductId = $(this).attr("data-id");
+        $(".alert").show();
+        $(".alert_bg").show();
+    });
+
+    $("#delCancel").click(function () {
+        $(".alert").hide();
+        $(".alert_bg").hide();
+    });
+
+    $("#delConfirm").click(function () {
+        $.ajax({
+            url: "/Mobile/Purchase/DeleteCartItem",
+            type: "POST",
+        data: { itemId: delProductId },
+            success: function (data) {
+                location.reload();
+                /*$("div[data-id=" + delProductId + "]").hide();
+                $("#del").toggle();
+                $(".heibg").toggle();*/
+            }
+        });
+    });
+
+    $("label[for=checkboxInputTop]").click(function () {
+        var checked = $("input[id=checkboxInputTop]").prop("checked");
+        updateCheckedProducts(checked);
+        $("input[id=checkboxInputTop]").prop("checked", checked);
+    });
+
+    $("label[for=checkboxInputBottom]").click(function () {
+        var checked = $("input[id=checkboxInputBottom]").prop("checked");
+        updateCheckedProducts(checked);
+        $("input[id=checkboxInputBottom]").prop("checked", checked);
+    });
+
+    $("label[for=labelCheck]").click(function () {
+        var productId = $(this).attr("ProductId");
+        var checked = !$("input[productid=" + productId + "]").prop("checked");
+
+        $.each(modelJson.Items, function () {
+            if (this.ProductId == productId) {
+                this.Selected = checked;                }
+        });
+        $("input[productid=" + productId + "]").prop("checked", checked);
+
+        if (checked == false)
+        {
+            $("input[id=checkboxInputBottom]").prop("checked", checked);
+            $("input[id=checkboxInputTop]").prop("checked", checked);
+        }
+
+        refeshDisplays();
+    });
+
+    function updateCheckedProducts(checked)
+    {
+        $(':checkbox').each(function () {
+            this.checked = !checked;
+            var productId = $(this).attr("ProductId");
+
+            $.each(modelJson.Items, function () {
+                if (this.ProductId == productId) {
+                    this.Selected = !checked;
+                }
+            });
+        });
+
+        refeshDisplays()
+    }
+
+    function init()
+    {
+        $(':checkbox').each(function () {
+            this.checked = true;
+            $.each(modelJson.Items, function () {
+                this.Selected = true;
+            });
+        });
+        refeshDisplays();
+    }
+
+    function refeshDisplays()
+    {
+        var totalQuatity = 0;
+        var totalWeight = 0;
+        var totalPrice = 0;
+
+        $.each(modelJson.Items, function () {
+            if (this.Selected)
+            {
+                totalQuatity += this.Quantity;
+                totalWeight += this.UnitWeight * this.Quantity;
+                totalPrice += this.UnitPrice * this.Quantity;
+            }
+        });
+
+        $("#item_count").text(totalQuatity);
+        $("#item_weight").text(totalWeight.toFixed(2));
+        $("#totalPrice").text(totalPrice.toFixed(2));
+
+        $("#cart_input").val("去结算(" + totalQuatity + ")");
+    }
+
+    $("input[num=num").change(function () {
+        changeProductQuantity(this, 0)
+    });
+
+    $("input[num=num").keydown(function () {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            changeProductQuantity(this, 0);
+            return false;
+        }
+        else
+            return true;
+    });
+
+    $("form").submit(function () {
+        var selectedNum = 0;
+        $(':checkbox').each(function () {
+            if (this.checked) {
+                selectedNum++;
+            }
+        });
+
+
+        //判断是否有缺货产品
+        if (CheckOutOfStock()) {
+            AlertMsg("亲，缺货产品不能进行结算哟~");
+            return false;
+        }
+
+        if (selectedNum == 0) {
+            AlertMsg("选择至少一个产品");
+            return false;
+        }
+
+        if (CheckSingleItemLessThan18()) {
+            AlertMsg('单件商品不能超过18个');
+            return false;
+        }
+
+        if (CheckItemNumberLessThan30()) {
+            AlertMsg("每单最多含有30件商品");
+            return false;
+        } else {
+            return true;
+        }
+    });
+
+    function CheckSingleItemLessThan18() {
+        var itemNumList = $('.text_box.left');
+        var checkedlist = $('.car_check input[type="checkbox"]');
+        var result = false;
+        if (itemNumList.length > 0) {
+            for (var i = 0 ; i < itemNumList.length; i++) {
+                var check = checkedlist[i].checked;
+                var num =  parseInt($(itemNumList[i]).val());
+                if (check && num > 18) {
+                    result = true;
+                    break;
+                }
+            };
+            return result;
+        } else {
+            return result;
+        }
+    }
+
+    function CheckItemNumberLessThan30() {
+        var itemNumList = $('.text_box.left');
+        var checkedlist = $('.car_check input[type="checkbox"]');
+        if (itemNumList.length > 0) {
+            var totalItems = 0;
+            for (var i = 0 ; i < itemNumList.length; i++) {
+                if (checkedlist[i].checked) {
+                    totalItems += parseInt($(itemNumList[i]).val());
+                }
+            };
+            if (totalItems > 30) {
+                return true
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    function CheckOutOfStock() {
+        var stockstatus = $('.stockstatus');
+        var checkedlist = $('.car_check input[type="checkbox"]');
+        var result = false;
+        if (stockstatus.length > 0) {
+            for (var i = 0 ; i < stockstatus.length; i++) {
+                var status = $(stockstatus[i]).attr('data-outstock');
+                var checked = checkedlist[i].checked;
+
+                if (status == 'True' && checked) {
+                    result = true;
+                    break;
+                }
+            };
+            return result;
+        } else {
+            return result;
+        }
+    }
+
+    $("#alertConfirm").click(function () {
+        $(".verify").hide();
+        $(".alert_bg").hide();
+    })
+
+    $('#outsideAlertView').click(function () {
+        var alertDisplay = $('#deleteAlert').css('display');
+        if(alertDisplay == 'none'){
+            $(".verify").hide();
+            $(".alert_bg").hide();
+        }
+    });
+
+    function AlertMsg(msg) {
+        $("#alertConfirm").text(msg);
+        $("#alertConfirm").css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+        $("#alertConfirm").css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+        $(".verify").show();
+        $(".alert_bg").show();
+    }
+});
+
+</script>
+
+
+
+    <!--尾部-->
+<div class="footer">
+    <ul class="clearfix footer_ul">
+        <li>
+            <a href="/Mobile">
+                <div class="footer_img">
+                    <img src="images/footer/shouye_ico.png" class="img_q" />
+                    <img src="images/footer/shouye_icoh.png" class="img_h" />
+                </div>
+                <p>
+                    首页
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(Tawk_API.toggle())">
+                <div class="footer_img">
+                    <img src="images/footer/footer_kefu.png" class="img_q" />
+                    <img src="images/footer/footer_kefuh.png" class="img_h" />
+                </div>
+                <p>
+                    客服
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Purchase/ShoppingCart" class="gouwuche" id="bottomCart">
+                <div class="footer_img" >
+                    <img src="images/footer/gouwudai.png" class="img_q" />
+                    <img src="images/footer/gouwudaih.png" class="img_h" />
+                    <span class="num" id="ecsCartInfo"></span>
+                </div>
+                <p>
+                    购物袋
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User">
+                <div class="footer_img">
+                    <img src="images/footer/mine.png" class="img_q" />
+                    <img src="footer/mineh.png" class="img_h" />
+                </div>
+                <p>
+                    我的
+                </p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Mobile/Purchase/GetCartItemCount",
+            type: "POST",
+            success: function (data) {
+                $("#ecsCartInfo").text(data.cart_total);
+            }
+        });
+    })
+</script>
+
+<script type="text/javascript" src="/Areas/mobile/js/qin.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5768107cb57c0500209794b6/1arrsi0jq';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+<!--Start of Google Analytics Script-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80632807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End of Google Analytics Script-->
+    
+</body>
+</html>

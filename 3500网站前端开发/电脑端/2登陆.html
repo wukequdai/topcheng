@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/mobileredirect.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    
+    <title>注册新用户</title>
+    <meta name="Keywords" content="51购, 51GO, 澳洲, 代发">
+    <meta name="Description" content="51购悉尼代发平台">
+    
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/init.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/indexheaderpartial.css">
+    
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="js/otherfuncs.js"></script>
+
+    
+</head>
+<body data-pinterest-extension-installed="ff1.37.9">
+    
+
+
+
+<style>
+    /*.dropdown-content a {
+    line-height:22px;
+    padding-top:5px;
+    padding-bottom:5px;
+}*/
+
+</style>
+
+<!--头部-->
+<div class="head">
+    <div class="jz clearfix">
+        <div class="left">
+            <span class="ml25">欢迎来到51GO！ </span>     
+                <a href="/Login/Login" class="ml25">登录</a>
+                <a href="/Login/Register" class="ml25">免费注册</a>
+            
+            
+        </div>
+        
+    </div>
+</div>
+<div class="nav">
+    <div class="jz clearfix">
+        <a href="/" class="logo left">
+            <img src="picture/logo.png" />
+        </a>
+        <div class="left nav_ss">
+            <div class="guanjianci">
+                <span class="hot">HOT!</span>
+                <a href="/Category/Search?keyword=Aptamil">爱他美 </a>
+                <span>|</span>
+                <a href="/Category/Search?keyword=Bellamy">贝拉米</a>
+                <span>|</span>
+                <a href="/Category/Search?keyword=Swisse">Swisse</a>
+                <span>|</span>
+                <a href="/Category/Search?keyword=%E9%B1%BC%E6%B2%B9">鱼油</a>
+                <span>|</span>
+                <a href="/Category/Search?keyword=%E7%BB%B4%E9%AA%A8%E5%8A%9B">维骨力 </a>
+                <span>|</span>
+                <a href="/Category/Search?keyword=%E6%9C%88%E8%A7%81%E8%8D%89">月见草</a>
+            </div>
+<form action="/Category/Search" method="post">                <div id="searchcontainer" class="head_ss clearfix">
+                    <input type="text" id="searchbox" class="left head_ss_shuru" name="keyword" placeholder="搜索商品品牌 名称 功效" />
+                    <input type="submit" value="" class="left head_ss_btn cursor" />
+                </div>
+</form>        </div>
+        <b><a href="/Purchase/ShoppingCart" id="ecsCartInfo" class="right head_car cursor"></a></b>
+    </div>
+</div>
+
+<!--菜单-->
+<ul class="menu jz clearfix" id="headermenu">
+    <li class="menuhead">
+        <a href="/" class="ahover">首页</a>
+    </li>
+    <li class="popup_parent">
+        <a href="/Category/Index/1">母婴专区</a>
+        <div class="popup_menu">
+            <div class="secondCategory">
+                <p><a href="/Category/Index/38">奶粉</a></p>
+                
+                <div class="thirdCategory">
+                    <a href="/Category/Index/39">1段</a>
+                    <a href="/Category/Index/40">2段</a>
+                    <a href="/Category/Index/41">3段</a>
+                    <a href="/Category/Index/42">4段</a>
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/43">辅食</a></p>
+                <div class="thirdCategory">
+                    <a href="/Category/Index/44">米粉</a>
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/45">婴幼儿用品</a></p>
+                <div class="thirdCategory">
+                    <a href="/Category/Index/46">洗护用品</a>
+                    <a href="/Category/Index/47">牙膏牙刷</a>
+                    <a href="/Category/Index/48">奶嘴奶品</a>
+                    <a href="/Category/Index/49">驱蚊防晒</a>
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/50">婴幼儿保健品</a></p>
+                <div class="thirdCategory">
+                    <a href="/Category/Index/51">婴幼儿鱼油</a>
+                    <a href="/Category/Index/52">DHA</a>
+                    <a href="/Category/Index/53">蜂产品</a>
+                    <a href="/Category/Index/67">感冒止咳</a>
+                    <a href="/Category/Index/68">婴幼儿维生素</a>
+                    <a href="/Category/Index/69">婴幼儿矿物质</a>
+                    <a href="/Category/Index/70">婴幼儿益生菌</a>
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/71">孕妇专用</a></p>
+                <div class="thirdCategory">
+                    <a href="/Category/Index/72">孕妇产品</a>
+                    <a href="/Category/Index/73">孕妇奶粉</a>
+                </div>
+            </div>
+        </div>
+        <div class="masklayer"></div>
+    </li>
+    <li class="popup_parent">
+        <a href="/Category/Index/2">营养保健</a>
+        <div class="popup_menu">
+            <div class="secondCategory">
+                <p><a href="/Category/Index/74">女性保健</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/75">男性保健</a></p>
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/76">老年保健</a></p>
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/77">排毒瘦身</a></p>
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/95">基础保健</a></p>
+                <div class="thirdCategory">
+                    <a href="/Category/Index/96">鱼油</a>
+                    <a href="/Category/Index/97">矿物质</a>
+                    <a href="/Category/Index/98">维生素</a>
+                    <a href="/Category/Index/99">蜂产品</a>
+                    <a href="/Category/Index/100">益生菌</a>
+                    <a href="/Category/Index/101">蛋白粉 膳食纤维</a>
+                    <a href="/Category/Index/102">基础保健其他</a>
+                    <a href="/Category/Index/103">护眼</a>
+                </div>
+            </div>
+        </div>
+        <div class="masklayer"></div>
+    </li>
+    <li class="popup_parent">
+        <a href="/Category/Index/3">美容护肤</a>
+        <div class="popup_menu">
+            <div class="secondCategory">
+                <p><a href="/Category/Index/78">护肤</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/79">沐浴清洁</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/80">防晒</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/81">彩妆</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/82">洗发护发</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/83">丰胸减肥</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+        </div>
+        <div class="masklayer"></div>
+    </li>
+    <li class="popup_parent">
+        <a href="/Category/Index/84">家居生活</a>
+        <div class="popup_menu">
+            <div class="secondCategory">
+                <p><a href="/Category/Index/85">口腔护理</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/86">个人护理</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/87">家居生活其他</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+        </div>
+        <div class="masklayer"></div>
+    </li>
+    <li class="popup_parent">
+        <a href="/Category/Index/88">健康美食</a>
+        <div class="popup_menu">
+            <div class="secondCategory">
+                <p><a href="/Category/Index/89">蜂蜜</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/90">营养面粉</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/91">奶制品</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/92">零食</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/93">麦片早餐</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+            <div class="secondCategory">
+                <p><a href="/Category/Index/94">健康美食其他</a></p>
+                
+                <div class="thirdCategory">
+                </div>
+            </div>
+        </div>
+        <div class="masklayer"></div>
+    </li>
+    <li class="popup_parent">
+        <a href="#">时尚</a>
+    </li>
+</ul>
+
+<div class="alert out_alert">
+    <p class="alert_tl">确认退出</p>
+    <div class="alert_text">
+        您确定要退出当前用户？
+    </div>
+    <div class="alert_btn">
+        <a href="javascript:void(0);" class="quxiao" id="delCancel-header">取消</a>
+        <a href="javascript:document.getElementById('logoutformheader').submit()" id="delConfirm-header" class="btn_red">退出</a>
+    </div>
+</div>
+
+<!--弹窗开始-->
+<div class="alert_bg"></div>
+
+<form action="/Login/LogOut" id="logoutformheader" method="post"><input name="__RequestVerificationToken" type="hidden" value="weLQRqMsTrK6NwmnTQTcccancqwcL9lnoQHvp2cWtbxXaoyKbRd1TBa3vqXZuSz_umBdyZ1pY2wt5JtgIHDgrJISvaauM4-RGdUSYN_8ytU1" /></form>
+<div id="masklayergrey"></div>
+
+
+<script type="text/javascript">
+    $(function () {
+
+        $("#outBtn-header").click(function () {
+            $(".alert_bg").show();
+            $(".alert").show();
+            $("body").css("overflow", "hidden");
+        })
+        $("#delCancel-header").click(function () {
+            $(".alert_bg").hide();
+            $(".alert").hide();
+            $("body").css("overflow", "auto");
+        })
+
+        ////首页弹窗层 等待子类目全部设定好之后再开启
+        //$(".popup_parent").hover(function () {
+        //    var currentOffset = $(this).offset();
+        //    var offsetWidth = currentOffset.left - $("#headermenu").offset().left;
+        //    $(this).css("background-color", "rgb(228, 228, 228)");
+        //    $(this).children(".popup_menu").css({ "display": "block", "width": $("#headermenu").width(), "left": -offsetWidth });
+        //    $(this).children(".masklayer").css({ "display": "block", "bottom": "-400px", "width": $(window).width(), "left": -currentOffset.left, "max-height":"325px"});
+        //    $("#masklayergrey").css({ "display": "block", "top": $("#headermenu").offset().top + $("#headermenu").height() + 3});
+        //}, function () {
+        //    $(this).css("background-color", "white");
+        //    $(this).children(".popup_menu").css({ "display": "none" });
+        //    $(this).children(".masklayer").css({ "display": "none" });
+        //    $("#masklayergrey").css({ "display": "none"});
+        //});
+
+
+        function searchProduct(request, response) {
+            $.ajax({
+                type: "POST",
+                url: "/Category/SearchJson?keyword=" + request.term,
+                success: function (data) { response(data.Data); },
+            });
+        }
+
+        $("#searchbox").autocomplete({
+            delay: 500,
+            minLength: 2,
+            source: searchProduct,
+            appendTo: '#searchcontainer',
+            select: function (event, ui) {
+                $("#small-searchterms").val(ui.item.label);
+                window.location = "/Product/" + ui.item.Slug;
+                return false;
+            }
+        })
+        .data("ui-autocomplete")._renderItem = function (ul, item) {
+            return $("<li></li>")
+                .data("item.autocomplete", item)
+                //.append("<a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td width=\"65\"><img src='" + item.ThumbnailUrl + "' width=\"65\"></td><td>" + item.Name + "</td></tr></table></a>")
+                .append("<a><div class=\"search-item\"><div class=\"search-item-img-box\" ><img src='" + item.ThumbnailUrl + "' class=\"search-item-img\"/></div><div class=\"search-item-info\"><div class=\"search-item-name\">" + item.Name + "</div><div class=\"search-item-price\">$" + item.Price + "</div></div></div>")
+                .appendTo(ul);
+        };
+
+    });
+</script>
+    
+
+
+<!-- 主内容-->
+<div class="main lg_main jz">
+    <div class="lg_tl">
+        <a href="/Login/Login" class="ahover">登录 </a>
+        <a href="/Login/Register">注册</a>
+    </div>
+<form action="/Login/Login" method="post"><input name="__RequestVerificationToken" type="hidden" value="FJ6qcaBmYKX9O1bl3hWC-54k5q_vsqlPIPUDhxQTxHCpfywRj6THfSlHhwEdPSxzGp44H3cLSMjvbhz6QKjVKucAkzqdXR7-HrvTrqdy4XM1" />        <div class="erro_mess"></div>
+        <div class="lg_main">
+            <div class="lg_con active">
+                <form>
+                    <div class="clearfix">
+                        <div class="left lg_inp lg_lf_inp">
+                            <input class=" text-box single-line" data-val="true" data-val-regex="手机号格式错误。" data-val-regex-pattern="(^04\d{8}$)|(^1[3-8]\d{9}$)|(^[uU]?\d{2,5}$)" data-val-required="The 手机号 field is required." id="Username" name="Username" placeholder="请输入手机号" type="text" value="" />
+                            <input class="f" data-val="true" data-val-required="The 密码 field is required." id="Password" name="Password" placeholder="请输入密码" type="password" />
+                        </div>
+                        <input type="submit" class="right btn_red lgbtn" value="登录" />
+                    </div>
+                    <div class="clearfix zidong">
+                        <div class="left clearfix">
+                            <input class="left check-box" data-val="true" data-val-required="The 记住密码 field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />
+                            <span class="left">自动登录</span>
+                        </div>
+                        <div class="right">
+                            <a href="/Login/Register">免费注册 </a>
+                            <a href="/Login/ForgotPassword">忘记密码？</a>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>注意</li>
+                            <li>
+                                <ul>
+                                    <li>在旧版网站有付款记录的用户，请联系客服微信 sydney51go1 索要新的用户名和密码；</li>
+                                    <li>没有在旧版网站付费的用户，请重新注册。</li>
+                                </ul>
+                            </li>
+                            <li>给您带来的不便，我们深表歉意。</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+</form></div>
+    <!--  底部的保证-->
+<div class="baozhang">
+    <ul class="clearfix jz">
+        <li>
+            <img src="picture/huizhang.png" />
+            <span class="baozhang_text">
+                <b>100%正品保证</b><br />
+                正品承诺，安全保障
+            </span>
+        </li>
+        <li>
+            <img src="picture/diqiu.png" />
+            <span class="baozhang_text">
+                <b>100%海外直采</b><br />
+                海外直采，急速直达
+            </span>
+        </li>
+        <li>
+            <img src="picture/shangou.png" />
+            <span class="baozhang_text">
+                <b>免税闪购</b><br />
+                免税无忧，闪购快送
+            </span>
+        </li>
+        <li>
+            
+            <img src="picture/huizhang.png" />
+            <span class="baozhang_text">
+                <b>售后无忧</b><br />
+                优质客服，为您服务
+            </span>
+        </li>
+    </ul>
+</div>
+
+<!-- 版本-->
+<div class="banben jz">
+    <p>
+        <a href="/Help/AboutUs">关于51GO </a>
+        <span>|</span>
+        <a href="/Help/CustomerNotice">消费者告知书</a>
+        <span>|</span>
+        <a href="/Help/ContactUs">联系我们</a>
+        <span>|</span>
+        <a href="/Help/ProductsPromise">100%正品保障</a>
+    </p>
+    <p class="banben_text">© 2014-2017 51GO Hurstville</p>
+    
+</div>
+<!--  右侧条-->
+
+<div class="youce">
+    <div class="youce_main">
+        <a href="/Purchase/ShoppingCart" id="youceCartInfo">
+            <div class="youce_car_num">0</div>
+            <div class="youce_car"></div>
+        </a>
+        
+        <!-- <a href="javascript:void(Tawk_API.toggle())" class="center"> -->
+            <!-- <p>在线 </p> -->
+            <!-- <p>客服</p> -->
+        <!-- </a> -->
+        <a href="javascript:void(0)" class="erw_img">
+            <img src="picture/menu_wx.png" class="erw_wx" />
+            <div class="erw_img_yin">
+                <img src="picture/sydney51go1.jpg" />
+            </div>
+        </a>
+        
+        
+
+        
+        
+        <a href="javascript:;" class="center topbtn">
+            <img src="picture/menu_top.png" />
+            TOP
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+    })
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5768107cb57c0500209794b6/1arrsi0jq';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+<!--Start of Google Analytics Script-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80632807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End of Google Analytics Script-->
+    
+</body>
+</html>

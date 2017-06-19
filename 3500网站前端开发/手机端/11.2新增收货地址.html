@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="js/mobileredirect.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#26c5cf">
+    <title>51购悉尼代发平台 - 新建收货地址 </title>
+    <meta name="Description" content="">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/init.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    
+
+    
+
+    
+</head>
+<body>
+    <!--头部开始-->
+<div class="head_fix">
+    <div class="head user_head clearfix">
+        <a href="javascript:history.back(-1)" class="head_back"></a>
+        新建收货地址
+        <div class="daohang">
+    <em></em>
+    <ul class="daohang_yin">
+        <span class="sj"></span>
+        <li>
+            <a href="/Mobile" class="clearfix">
+                <img src="images/head_menu_shouye.png" /> 首页
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Category" class="clearfix">
+                <img src="images/head_menu_fenlei.png" /> 分类
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User" class="clearfix">
+                <img src="images/head_menu_zhanghu.png" /> 我的账户
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Order?orderStatus=0" class="clearfix">
+                <img src="images/head_menu_dingdan.png" /> 我的订单
+            </a>
+        </li>
+    </ul>
+</div>
+    </div>
+</div>
+
+        <script type="text/javascript" src="js/jquery.cxselect.min.js"></script>
+
+
+<div class="yucunkuan_tl">
+    
+    <input type="button" class="btn_blue cursor yckTrigger" value="一键提取">
+    <div class="quickAddress">
+        <div class="quickAddressInput"><textarea placeholder="快速录入格式(例)：
+地址，收件人，电话 (逗号或者回车作为间隔符)
+"></textarea></div>
+        <div class="quickAddressInputBtns">
+            <button class="enterAddress">一键提取</button><button class="clearAddress">清空</button><button class="closeAddress">关闭</button>
+        </div>
+    </div>
+</div>
+
+<form action="/Mobile/User/ConsigneeCreate?returnUrl=%2FMobile%2FPurchase%2FCheckout" method="post"><input name="__RequestVerificationToken" type="hidden" value="eyKLV243AI9AHupQpigAi_U-a6meEnGCev3cLeqsS_IxN3RXqtUtT8nObpJilYWS0VUJnLWsKTCxbNMyjcvEyNuUfkZHhN0plzyA5hKv4sKugMf6EST3KLE-yegnmu4WfiudEBoaYT0ltCrNrbw9tg2" /><!--新建收货地址开始-->
+    <div class="reg_main">
+        <input type="hidden" name="returnUrl" value="/Mobile/Purchase/Checkout" />
+        <div class="reg_gp">
+            <input class="recipientName text-box single-line" data-val="true" data-val-required="请填写姓名" id="Name" name="Name" placeholder="收货人姓名（必填）" type="text" value="" />
+        </div>
+        <div class="erro"><span class="field-validation-valid has-error" data-valmsg-for="Name" data-valmsg-replace="true"></span></div>
+        <div class="reg_gp">
+            <input class="recipientPhone text-box single-line" data-val="true" data-val-required="请填写联系电话" id="PhoneNumber" name="PhoneNumber" placeholder="电话号码（必填）" type="text" value="" />
+        </div>
+        <div class="erro"><span class="field-validation-valid has-error" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span></div>
+
+        <div class="reg_gp" id="city_china">
+            <select class="province" name="Province"></select>
+            <select class="city" name="City"></select>
+        </div>
+        <div class="erro"><span class="field-validation-valid has-error" data-valmsg-for="Province" data-valmsg-replace="true"></span></div>
+        <div class="erro"><span class="field-validation-valid has-error" data-valmsg-for="City" data-valmsg-replace="true"></span></div>
+
+        <div class="reg_gp">
+            <input class="detailAddress text-box single-line" data-val="true" data-val-required="请填写详细地址" id="AddressLine" name="AddressLine" placeholder="详细地址（必填）" type="text" value="" />
+        </div>
+        <div class="erro"><span class="field-validation-valid has-error" data-valmsg-for="AddressLine" data-valmsg-replace="true"></span></div>
+        <div class="reg_gp">
+            <input class="citizenIdCard text-box single-line" data-val="true" data-val-regex="身份证号格式不正确！" data-val-regex-pattern="^\d{6}(18|19|20)\d{2}(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d{3}(\d|[xX])$" id="IdCard" name="IdCard" placeholder="身份证号码" type="text" value="" />
+        </div>
+        <div class="erro"><span class="field-validation-valid has-error" data-valmsg-for="IdCard" data-valmsg-replace="true"></span></div>
+        
+        <input type="submit" class="btn btn_blue loginbtn mt10" value="确认新增收货地址" />
+    </div>
+</form><script type="text/javascript">
+    $.cxSelect.defaults.url = "js/cityData.min.json";
+
+    $('#city_china').cxSelect({
+        selects: ['province', 'city']
+    });
+
+    $('.yckTrigger').click(function () {
+        $('.quickAddress').toggleClass('showIt').promise().done(function () {
+            $('.quickAddressInput textarea').focus();
+        });
+    })
+
+    $('.enterAddress').click(function () {
+        var address = $('.quickAddressInput textarea').val();
+        extractAddress(address);
+    });
+
+    $('.clearAddress').click(function () {
+        $('.quickAddressInput textarea').val('');
+    })
+
+    $('.closeAddress').click(function () {
+        $('.quickAddress').toggleClass('showIt');
+    })
+    function extractAddress(dz) {
+        $.ajax({
+            url: "js/GetExtractAddress",
+            type: "POST",
+            dataType: "json",
+            data: { address: dz },
+            success: function (data) {
+                $('.recipientName').val(data.Name);
+                $('.recipientPhone').val(data.PhoneNumber);
+                $('.citizenIdCard').val(data.IdCard);
+                $('#city_china .province').val(data.Province);
+                //当json中解析出省市数据时，不在city选择中进行添加
+                $('#city_china .city').empty();
+                if (data.City.length != 0) {
+                    $('#city_china .city').removeAttr('disabled').append('<option val="' + data.City + '" selected>' + data.City + '</option>');
+                }
+                $('.detailAddress').val(data.AddressLine)
+                $('.quickAddress').toggleClass('showIt');
+            },
+            error: function (data) {
+                $('.quickAddress').toggleClass('showIt');
+            }
+        })
+    }
+</script>
+
+    <!--尾部-->
+<div class="footer">
+    <ul class="clearfix footer_ul">
+        <li>
+            <a href="/Mobile">
+                <div class="footer_img">
+                    <img src="images/footer/shouye_ico.png" class="img_q" />
+                    <img src="images/footer/shouye_icoh.png" class="img_h" />
+                </div>
+                <p>
+                    首页
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(Tawk_API.toggle())">
+                <div class="footer_img">
+                    <img src="images/footer/footer_kefu.png" class="img_q" />
+                    <img src="images/footer/footer_kefuh.png" class="img_h" />
+                </div>
+                <p>
+                    客服
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/Purchase/ShoppingCart" class="gouwuche" id="bottomCart">
+                <div class="footer_img" >
+                    <img src="images/footer/gouwudai.png" class="img_q" />
+                    <img src="images/footer/gouwudaih.png" class="img_h" />
+                    <span class="num" id="ecsCartInfo"></span>
+                </div>
+                <p>
+                    购物袋
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="/Mobile/User">
+                <div class="footer_img">
+                    <img src="images/footer/mine.png" class="img_q" />
+                    <img src="images/footer/mineh.png" class="img_h" />
+                </div>
+                <p>
+                    我的
+                </p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Mobile/Purchase/GetCartItemCount",
+            type: "POST",
+            success: function (data) {
+                $("#ecsCartInfo").text(data.cart_total);
+            }
+        });
+    })
+</script>
+
+<script type="text/javascript" src="js/qin.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5768107cb57c0500209794b6/1arrsi0jq';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+<!--Start of Google Analytics Script-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80632807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End of Google Analytics Script-->
+    
+</body>
+</html>
