@@ -1,0 +1,1 @@
+ <%response.redirect "Sep_Login.asp"%>
